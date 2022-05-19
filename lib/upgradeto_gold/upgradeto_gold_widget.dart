@@ -1,9 +1,9 @@
-import 'package:sparksfly/upgradeto_gold/upgrade_to_gold2.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UpgradetoGoldWidget extends StatefulWidget {
   const UpgradetoGoldWidget({Key key}) : super(key: key);
@@ -26,13 +26,13 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              width: double.infinity,
+              width: 375,
               height: 295,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.asset(
-                    'assets/images/Mask_Group_28@3x.png',
+                    'assets/images/Mask_Group_28.png',
                   ).image,
                 ),
               ),
@@ -44,17 +44,17 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Container(
-                          width: 40,
-                          height: 40,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
+                        InkWell(
+                          onTap: () async {
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            width: 26,
+                            height: 26,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
                             child: Image.asset(
                               'assets/images/Group_62(1)@3x.png',
                             ),
@@ -80,10 +80,10 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 10, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                     child: Container(
-                      width: 74,
-                      height: 74,
+                      width: 64,
+                      height: 64,
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -94,18 +94,21 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
                       ),
                     ),
                   ),
-                  Text(
-                    'Find out who hearted you!',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Proxima Nova',
-                          color: FlutterFlowTheme.of(context).secondaryColor,
-                          fontSize: 19,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 14, 0, 0),
+                    child: Text(
+                      'Find out who hearted you!',
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Proxima Nova',
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            fontSize: 19,
+                            fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
+                          ),
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                     child: Container(
                       width: 256.62,
                       height: 44,
@@ -149,10 +152,12 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
               child: Container(
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                width: 331,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: ClipRect(
                   child: ImageFiltered(
                     imageFilter: ImageFilter.blur(
@@ -170,41 +175,29 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 15, top: 22),
-                          child: Image.asset(
-                            'assets/images/select-photos1.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.asset(
+                          'assets/images/Rectangle_23@3x.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        Container(
-                          margin: EdgeInsets.only(right: 15, top: 22),
-                          child: Image.asset(
-                            'assets/images/select-photos2.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.asset(
+                          'assets/images/Rectangle_24@3x.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 17, bottom: 20),
-                          child: Image.asset(
-                            'assets/images/select-photos3.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.asset(
+                          'assets/images/Rectangle_25@3x.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        Container(
-                          margin: EdgeInsets.only(right: 27, bottom: 20),
-                          child: Image.asset(
-                            'assets/images/select-photos4.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
+                        Image.asset(
+                          'assets/images/Rectangle_31@3x.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
                       ],
                     ),
@@ -213,31 +206,34 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-              child: FFButtonWidget(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => UpgradeToGold2()));
-                },
-                text: 'Purchase Now!',
-                options: FFButtonOptions(
-                  width: 323.25,
-                  height: 50,
-                  color: FlutterFlowTheme.of(context).tertiaryColor,
-                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                        fontFamily: 'Proxima Nova',
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        useGoogleFonts: false,
-                      ),
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                    width: 1,
+              padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                decoration: BoxDecoration(
+                  color: Color(0x00EEEEEE),
+                ),
+                child: FFButtonWidget(
+                  onPressed: () {
+                    print('Button pressed ...');
+                  },
+                  text: 'Purchase Now!',
+                  options: FFButtonOptions(
+                    width: 326.62,
+                    height: 56,
+                    color: FlutterFlowTheme.of(context).tertiaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Proxima Nova',
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          useGoogleFonts: false,
+                        ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 28,
                   ),
-                  borderRadius: 28,
                 ),
               ),
             ),

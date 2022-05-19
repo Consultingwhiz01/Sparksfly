@@ -1,10 +1,10 @@
-import 'package:easy_debounce/easy_debounce.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-
 import '../location_enable/location_enable_widget.dart';
+import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class VerifyPhoneNumberWidget extends StatefulWidget {
   const VerifyPhoneNumberWidget({Key key}) : super(key: key);
@@ -15,13 +15,13 @@ class VerifyPhoneNumberWidget extends StatefulWidget {
 }
 
 class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
   TextEditingController textController4;
   TextEditingController textController5;
   TextEditingController textController6;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -47,7 +47,7 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Group_3595-modified.png',
+                'assets/images/Group_3595@3x.png',
               ).image,
             ),
           ),
@@ -74,7 +74,7 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 29, 0, 0),
                   child: Text(
                     'Verify your Phone Number',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
@@ -86,7 +86,7 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 14, 0, 0),
                   child: Text(
                     'Enter the code we\'ve sent by text to',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
@@ -124,57 +124,55 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(13, 50, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 41, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
+                      Container(
+                        width: 48.1,
+                        height: 43.13,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                          borderRadius: BorderRadius.circular(22),
+                        ),
+                        child: TextFormField(
+                          controller: textController1,
+                          onChanged: (_) => EasyDebounce.debounce(
+                            'textController1',
+                            Duration(milliseconds: 2000),
+                            () => setState(() {}),
                           ),
-                          child: TextFormField(
-                            controller: textController1,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController1',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
+                          autofocus: true,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
                               ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
                               ),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
                           ),
+                          style: FlutterFlowTheme.of(context).bodyText1,
+                          keyboardType: TextInputType.number,
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
                         child: Container(
                           width: 48.1,
                           height: 43.13,
@@ -214,11 +212,12 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                               ),
                             ),
                             style: FlutterFlowTheme.of(context).bodyText1,
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
                         child: Container(
                           width: 48.1,
                           height: 43.13,
@@ -258,11 +257,12 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                               ),
                             ),
                             style: FlutterFlowTheme.of(context).bodyText1,
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
                         child: Container(
                           width: 48.1,
                           height: 43.13,
@@ -302,11 +302,12 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                               ),
                             ),
                             style: FlutterFlowTheme.of(context).bodyText1,
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
                         child: Container(
                           width: 48.1,
                           height: 43.13,
@@ -346,11 +347,12 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                               ),
                             ),
                             style: FlutterFlowTheme.of(context).bodyText1,
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
                         child: Container(
                           width: 48.1,
                           height: 43.13,
@@ -390,6 +392,7 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                               ),
                             ),
                             style: FlutterFlowTheme.of(context).bodyText1,
+                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),
@@ -397,34 +400,41 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(13, 30, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LocationEnableWidget(),
-                        ),
-                      );
-                    },
-                    text: 'Next',
-                    options: FFButtonOptions(
-                      width: 323.25,
-                      height: 48.13,
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontSize: 15,
-                            useGoogleFonts: false,
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 52, 0, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Color(0x00EEEEEE),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LocationEnableWidget(),
                           ),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1,
+                        );
+                      },
+                      text: 'Next',
+                      options: FFButtonOptions(
+                        width: 323.25,
+                        height: 48.13,
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              fontSize: 15,
+                              useGoogleFonts: false,
+                            ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 24,
                       ),
-                      borderRadius: 24,
                     ),
                   ),
                 ),

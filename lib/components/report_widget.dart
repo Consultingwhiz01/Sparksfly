@@ -1,7 +1,9 @@
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ReportWidget extends StatefulWidget {
   const ReportWidget({Key key}) : super(key: key);
@@ -23,7 +25,7 @@ class _ReportWidgetState extends State<ReportWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 375,
       height: 345,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryColor,

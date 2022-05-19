@@ -1,8 +1,9 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-
 import '../notification_enable/notification_enable_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LocationEnableWidget extends StatefulWidget {
   const LocationEnableWidget({Key key}) : super(key: key);
@@ -27,7 +28,7 @@ class _LocationEnableWidgetState extends State<LocationEnableWidget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Group_3595-modified.png',
+                'assets/images/Group_3595@3x.png',
               ).image,
             ),
           ),
@@ -39,7 +40,7 @@ class _LocationEnableWidgetState extends State<LocationEnableWidget> {
                 child: Container(
                   decoration: BoxDecoration(),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
                     child: Image.asset(
                       'assets/images/location-outline@3x.png',
                       width: 79.67,
@@ -61,73 +62,81 @@ class _LocationEnableWidgetState extends State<LocationEnableWidget> {
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 75, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 85, 0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => NotificationEnableWidget(),
-                            ),
-                          );
-                          // print('Button pressed ...');
-                        },
-                        text: 'Allow access',
-                        options: FFButtonOptions(
-                          width: 323.25,
-                          height: 50,
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .subtitle2
-                              .override(
-                                fontFamily: 'Proxima Nova',
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                fontSize: 15,
-                                useGoogleFonts: false,
-                              ),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 24,
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        decoration: BoxDecoration(
+                          color: Color(0x00EEEEEE),
+                          borderRadius: BorderRadius.circular(24),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 17, 0, 0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            Navigator.push(
+                          onPressed: () async {
+                            await Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
                                     NotificationEnableWidget(),
                               ),
                             );
-                            // print('Button pressed ...');
                           },
-                          text: 'Skip',
+                          text: 'Allow access',
                           options: FFButtonOptions(
                             width: 323.25,
                             height: 48.13,
-                            color: Color(0x00FFCB37),
-                            textStyle:
-                                FlutterFlowTheme.of(context).subtitle2.override(
-                                      fontFamily: 'Proxima Nova',
-                                      color: FlutterFlowTheme.of(context)
-                                          .tertiaryColor,
-                                      fontSize: 15,
-                                      useGoogleFonts: false,
-                                    ),
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .subtitle2
+                                .override(
+                                  fontFamily: 'Proxima Nova',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  fontSize: 15,
+                                  useGoogleFonts: false,
+                                ),
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              width: 2,
+                              color: Colors.transparent,
+                              width: 1,
                             ),
                             borderRadius: 24,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 17, 0, 0),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          decoration: BoxDecoration(
+                            color: Color(0x00EEEEEE),
+                          ),
+                          child: FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: 'Skip',
+                            options: FFButtonOptions(
+                              width: 323.25,
+                              height: 48.13,
+                              color: Color(0x00FFCB37),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: FlutterFlowTheme.of(context)
+                                        .tertiaryColor,
+                                    fontSize: 15,
+                                    useGoogleFonts: false,
+                                  ),
+                              borderSide: BorderSide(
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                width: 2,
+                              ),
+                              borderRadius: 24,
+                            ),
                           ),
                         ),
                       ),

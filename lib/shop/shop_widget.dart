@@ -1,9 +1,9 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-
-import '../models/goldCoice.dart';
-import '../models/premiumChoice.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ShopWidget extends StatefulWidget {
   const ShopWidget({Key key}) : super(key: key);
@@ -19,26 +19,6 @@ class _ShopWidgetState extends State<ShopWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      // extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 203, 55),
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          'Shop',
-          style: TextStyle(color: Colors.white),
-        ),
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.white,
-          ),
-          tooltip: 'Back',
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Container(
@@ -49,13 +29,45 @@ class _ShopWidgetState extends State<ShopWidget> {
             image: DecorationImage(
               fit: BoxFit.fill,
               image: Image.asset(
-                'assets/images/Mask_Group_33@3x.png',
+                'assets/images/Mask_Group_35.png',
               ).image,
             ),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 100, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                    ),
+                  ),
+                  Text(
+                    'Shop',
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Proxima Nova',
+                          color: FlutterFlowTheme.of(context).secondaryColor,
+                          fontSize: 21,
+                          useGoogleFonts: false,
+                        ),
+                  ),
+                ],
+              ),
               Expanded(
                 child: DefaultTabController(
                   length: 5,
@@ -63,29 +75,19 @@ class _ShopWidgetState extends State<ShopWidget> {
                   child: Column(
                     children: [
                       TabBar(
-                        labelColor: FlutterFlowTheme.of(context).tertiaryColor,
-                        indicator: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        indicatorSize: TabBarIndicatorSize.tab,
-
-                        unselectedLabelColor:
-                            FlutterFlowTheme.of(context).secondaryColor,
+                        labelColor: Colors.white,
+                        unselectedLabelColor: Color(0xB3FFFFFF),
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Proxima Nova',
                                   fontSize: 12,
                                   useGoogleFonts: false,
                                 ),
-                        // indicatorColor:
-                        //     FlutterFlowTheme.of(context).secondaryColor,
+                        indicatorColor:
+                            FlutterFlowTheme.of(context).secondaryColor,
                         tabs: [
                           Tab(
-                            child: Container(
-                              child: Text('Boost'),
-                            ),
-                            // text: 'Boost',
+                            text: 'Boost',
                           ),
                           Tab(
                             text: 'Extend',
@@ -109,94 +111,153 @@ class _ShopWidgetState extends State<ShopWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
-                                    alignment: Alignment.centerLeft,
-                                    margin: EdgeInsets.only(top: 20, left: 20),
-                                    // height: 30,
-                                    width: double.infinity,
-                                    child: Text(
-                                      'Star Bundles',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'Proxima Nova',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 28),
-                                    ),
-                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Container(
-                                              width: 70,
-                                              height: 70,
-                                              clipBehavior: Clip.antiAlias,
-                                              decoration: BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                              child: Image.asset(
-                                                'assets/images/Group_1191@3x.png',
-                                              ),
+                                        20, 20, 0, 0),
+                                    child: Text(
+                                      'Star Bundles',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Proxima Nova',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            fontSize: 28,
+                                            useGoogleFonts: false,
+                                          ),
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Container(
+                                            width: 70,
+                                            height: 70,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
                                             ),
-                                            Text(
-                                              '1 stars',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily:
-                                                            'Proxima Nova',
-                                                        fontSize: 13,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                            ),
-                                          ],
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 20, 0),
-                                          child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
-                                            },
-                                            text: '\$4.99',
-                                            options: FFButtonOptions(
-                                              width: 94,
-                                              height: 40,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryColor,
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .subtitle2
-                                                  .override(
-                                                    fontFamily: 'Poppins',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .tertiaryColor,
-                                                    fontSize: 13,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                              borderSide: BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1,
-                                              ),
-                                              borderRadius: 28,
+                                            child: Image.asset(
+                                              'assets/images/Group_1191@3x.png',
                                             ),
                                           ),
+                                          Text(
+                                            '1 stars',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Proxima Nova',
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 20, 0),
+                                        child: FFButtonWidget(
+                                          onPressed: () {
+                                            print('Button pressed ...');
+                                          },
+                                          text: '\$4.99',
+                                          options: FFButtonOptions(
+                                            width: 94,
+                                            height: 40,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .subtitle2
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiaryColor,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                            borderSide: BorderSide(
+                                              color: Colors.transparent,
+                                              width: 1,
+                                            ),
+                                            borderRadius: 28,
+                                          ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Container(
+                                            width: 70,
+                                            height: 70,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/Group_1191@3x.png',
+                                            ),
+                                          ),
+                                          Text(
+                                            '3 stars',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Proxima Nova',
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 20, 0),
+                                        child: FFButtonWidget(
+                                          onPressed: () {
+                                            print('Button pressed ...');
+                                          },
+                                          text: '\$12.99',
+                                          options: FFButtonOptions(
+                                            width: 94,
+                                            height: 40,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .subtitle2
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiaryColor,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                            borderSide: BorderSide(
+                                              color: Colors.transparent,
+                                              width: 1,
+                                            ),
+                                            borderRadius: 28,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -264,72 +325,6 @@ class _ShopWidgetState extends State<ShopWidget> {
                                       ),
                                     ],
                                   ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Container(
-                                            width: 70,
-                                            height: 70,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.asset(
-                                              'assets/images/Group_1191@3x.png',
-                                            ),
-                                          ),
-                                          Text(
-                                            '20 stars',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Proxima Nova',
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 20, 0),
-                                        child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
-                                          },
-                                          text: '\$49.99',
-                                          options: FFButtonOptions(
-                                            width: 94,
-                                            height: 40,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryColor,
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .subtitle2
-                                                .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .tertiaryColor,
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                            borderSide: BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1,
-                                            ),
-                                            borderRadius: 28,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 10),
@@ -353,7 +348,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                               ),
                                             ),
                                             Text(
-                                              '50 stars',
+                                              '8 stars',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1
@@ -376,7 +371,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                             onPressed: () {
                                               print('Button pressed ...');
                                             },
-                                            text: '\$79.99',
+                                            text: '\$29.99',
                                             options: FFButtonOptions(
                                               width: 94,
                                               height: 40,
@@ -405,70 +400,15 @@ class _ShopWidgetState extends State<ShopWidget> {
                                       ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 20, 10),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          3.33,
-                                      height: 80,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x4CFFFFFF),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Align(
-                                        alignment: AlignmentDirectional(0, 0),
-                                        child: Text(
-                                          'The Star button lets you ahead of everyone else\nfor 30 minutes to get seen more.\n(Tap button for star)',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Proxima Nova',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w600,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 20, 20),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          3.33,
-                                      height: 80,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x4CFFFFFF),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Align(
-                                        alignment: AlignmentDirectional(0, 0),
-                                        child: Text(
-                                          'When you\'re ready tap the star button in your sparks\ntab for 30 min or hold the button to get 60 min superstar',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Proxima Nova',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.w600,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
                                   Divider(
+                                    height: 5,
                                     thickness: 1,
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryColor,
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 0, 0),
+                                        20, 24, 0, 0),
                                     child: Text(
                                       'Superstar Bundles',
                                       style: FlutterFlowTheme.of(context)
@@ -502,73 +442,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                             ),
                                           ),
                                           Text(
-                                            '1 Superstar',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Proxima Nova',
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.normal,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 20, 0),
-                                        child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
-                                          },
-                                          text: '\$7.99',
-                                          options: FFButtonOptions(
-                                            width: 94,
-                                            height: 40,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryColor,
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .subtitle2
-                                                .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .tertiaryColor,
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                            borderSide: BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1,
-                                            ),
-                                            borderRadius: 28,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Container(
-                                            width: 70,
-                                            height: 70,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.asset(
-                                              'assets/images/Group_1191@3x.png',
-                                            ),
-                                          ),
-                                          Text(
-                                            '5 Superstar',
+                                            '10 Stars ',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
@@ -634,7 +508,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                             ),
                                           ),
                                           Text(
-                                            '20 Superstar',
+                                            '20 Stars ',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
@@ -653,7 +527,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                           onPressed: () {
                                             print('Button pressed ...');
                                           },
-                                          text: '\$159.99',
+                                          text: '\$49.99',
                                           options: FFButtonOptions(
                                             width: 94,
                                             height: 40,
@@ -700,7 +574,73 @@ class _ShopWidgetState extends State<ShopWidget> {
                                             ),
                                           ),
                                           Text(
-                                            '50 Superstar',
+                                            '50 Stars',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Proxima Nova',
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 20, 0),
+                                        child: FFButtonWidget(
+                                          onPressed: () {
+                                            print('Button pressed ...');
+                                          },
+                                          text: '\$79.99',
+                                          options: FFButtonOptions(
+                                            width: 94,
+                                            height: 40,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .subtitle2
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiaryColor,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                            borderSide: BorderSide(
+                                              color: Colors.transparent,
+                                              width: 1,
+                                            ),
+                                            borderRadius: 28,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Container(
+                                            width: 70,
+                                            height: 70,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.asset(
+                                              'assets/images/Group_1191@3x.png',
+                                            ),
+                                          ),
+                                          Text(
+                                            '100 Stars',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
@@ -748,11 +688,11 @@ class _ShopWidgetState extends State<ShopWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 20, 10),
+                                        20, 0, 20, 30),
                                     child: Container(
                                       width: MediaQuery.of(context).size.width *
                                           3.33,
-                                      height: 80,
+                                      height: 70,
                                       decoration: BoxDecoration(
                                         color: Color(0x4CFFFFFF),
                                         borderRadius: BorderRadius.circular(10),
@@ -760,7 +700,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                       child: Align(
                                         alignment: AlignmentDirectional(0, 0),
                                         child: Text(
-                                          'The Superstar button lets you ahead of everyone\nelse for a whole hour to get seen more\n(Hold button for superstar)',
+                                          'The Star button lets you ahead of everyone else\nfor 30 minutes to get seen more',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
@@ -783,7 +723,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 0),
+                                      0, 20, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -1210,7 +1150,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 0, 0),
+                                      0, 20, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -1763,714 +1703,535 @@ class _ShopWidgetState extends State<ShopWidget> {
                                 ),
                               ],
                             ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    color: Colors.white,
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.only(top: 15),
-                                          height: 280,
-                                          decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 255, 203, 55),
-                                            borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(50),
-                                              bottomRight: Radius.circular(50),
-                                            ),
-                                          ),
-                                          child: GridView.count(
-                                            crossAxisCount: 2,
-                                            childAspectRatio: 3 / 2,
-                                            crossAxisSpacing: 40.0,
-                                            mainAxisSpacing: 0.0,
-                                            // shrinkWrap: true,
-                                            children: List.generate(
-                                                goldChoices.length, (index) {
-                                              return Container(
-                                                child: GoldCards(
-                                                  goldChoice:
-                                                      goldChoices[index],
-                                                ),
-                                              );
-                                            }),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: SingleChildScrollView(
-                                            child: Container(
-                                              margin: EdgeInsets.all(30),
-                                              alignment: Alignment.center,
-                                              decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                      image: AssetImage(
-                                                          'assets/images/bg-half.png'),
-                                                      fit: BoxFit.fill),
-                                                  // color: Color.fromARGB(
-                                                  //     255, 255, 203, 55),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20)),
-                                              child: Column(
-                                                children: [
-                                                  Container(
-                                                    margin: EdgeInsets.only(
-                                                        top: 30,
-                                                        bottom: 10,
-                                                        left: 30,
-                                                        right: 30),
-                                                    padding: EdgeInsets.only(
-                                                        bottom: 15),
-                                                    decoration: BoxDecoration(
-                                                      border: Border(
-                                                        bottom: BorderSide(
-                                                            width: 5.0,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    247,
-                                                                    181,
-                                                                    0)),
-                                                      ),
-                                                    ),
-                                                    child: Text(
-                                                      'What you will get in Gold',
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headline5
-                                                          .copyWith(
-                                                            color: Colors.white,
-                                                            fontFamily:
-                                                                'Proxima Nova',
-                                                            fontWeight:
-                                                                FontWeight.w700,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                  Column(
-                                                    children: [
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                          bottom: 7,
-                                                        ),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   Unlimited heart swipes',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   Unlimited timer extensions',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   Unlimited expired match recovery',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   See who liked you and choose to like them back',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   See who hearted you and choose to like them back',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   5 Diamond hearts a day',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                      Container(
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 7,
-                                                                top: 7),
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(20, 0,
-                                                                    20, 0),
-                                                        decoration: BoxDecoration(
-                                                            border: Border(
-                                                                bottom: BorderSide(
-                                                                    width: 0.5,
-                                                                    color: Colors
-                                                                        .white))),
-                                                        child: Text(
-                                                          '\u{2713}   2 Stars a week',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .bodyText1
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  )
-                                                  // SizedBox()
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [],
-                                ),
-                              ],
-                            ),
-                            Container(
+                            SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Expanded(
-                                    child: Container(
-                                      color: Colors.white,
+                                  Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.869,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                      image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: Image.asset(
+                                          'assets/images/Mask_Group_59.png',
+                                        ).image,
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          20, 0, 20, 0),
                                       child: Column(
+                                        mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Container(
-                                            padding: EdgeInsets.only(top: 15),
-                                            height: 280,
-                                            decoration: BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                              borderRadius: BorderRadius.only(
-                                                bottomLeft: Radius.circular(50),
-                                                bottomRight:
-                                                    Radius.circular(50),
-                                              ),
-                                            ),
-                                            child: GridView.count(
-                                              crossAxisCount: 2,
-                                              childAspectRatio: 3 / 2,
-                                              crossAxisSpacing: 40.0,
-                                              mainAxisSpacing: 0.0,
-                                              // shrinkWrap: true,
-                                              children: List.generate(
-                                                  premiumChoices.length,
-                                                  (index) {
-                                                return Container(
-                                                  child: PremiumCards(
-                                                    premiumChoice:
-                                                        premiumChoices[index],
-                                                  ),
-                                                );
-                                              }),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: SingleChildScrollView(
-                                              child: Container(
-                                                margin: EdgeInsets.all(30),
-                                                alignment: Alignment.center,
-                                                decoration: BoxDecoration(
-                                                    image: DecorationImage(
-                                                        image: AssetImage(
-                                                            'assets/images/bg-half.png'),
-                                                        fit: BoxFit.fill),
-                                                    // color: Color.fromARGB(
-                                                    //     255, 255, 203, 55),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20)),
-                                                child: Column(
-                                                  children: [
-                                                    SingleChildScrollView(
-                                                      child: Container(
-                                                        margin: EdgeInsets.only(
-                                                            top: 30,
-                                                            bottom: 10,
-                                                            left: 30,
-                                                            right: 30),
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                bottom: 15),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(0, 20, 0, 0),
+                                                child: Container(
+                                                  width: 152,
+                                                  height: 103.92,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                        width: 152,
+                                                        height: 100,
                                                         decoration:
                                                             BoxDecoration(
-                                                          border: Border(
-                                                            bottom: BorderSide(
-                                                                width: 5.0,
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        255,
-                                                                        247,
-                                                                        181,
-                                                                        0)),
-                                                          ),
+                                                          color: Colors.white,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(12),
                                                         ),
-                                                        child: Text(
-                                                          'What you will get in Premium',
-                                                          style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .headline5
-                                                                  .copyWith(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontFamily:
-                                                                        'Proxima Nova',
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w700,
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      0, 0, 14),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .end,
+                                                            children: [
+                                                              Container(
+                                                                width: 95,
+                                                                height: 32,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              6),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0,
+                                                                          6,
+                                                                          0,
+                                                                          0),
+                                                                  child: Text(
+                                                                    'Save 13%',
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyText1
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Proxima Nova',
+                                                                          color:
+                                                                              Colors.white,
+                                                                          fontSize:
+                                                                              11,
+                                                                          useGoogleFonts:
+                                                                              false,
+                                                                        ),
                                                                   ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '1 Week',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Proxima Nova',
+                                                                      color: Color(
+                                                                          0xFFFFCB37),
+                                                                      fontSize:
+                                                                          20,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            6,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  '\$ 13.99 / Week',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Proxima Nova',
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
                                                         ),
                                                       ),
-                                                    ),
-                                                    Column(
-                                                      children: [
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                            bottom: 7,
-                                                          ),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   Unlimited heart swipes',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   See who liked you and choose to like them back',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   15 more hearts for a total of 30 hearts every 24 hours',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   1 Diamond heart a day',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   1 Star a week to get seen more',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   1 24-hour extension a day',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  bottom: 7,
-                                                                  top: 7),
-                                                          margin:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(20,
-                                                                      0, 20, 0),
-                                                          decoration: BoxDecoration(
-                                                              border: Border(
-                                                                  bottom: BorderSide(
-                                                                      width:
-                                                                          0.5,
-                                                                      color: Colors
-                                                                          .white))),
-                                                          child: Text(
-                                                            '\u{2713}   Can recover one expired match a day',
-                                                            style: Theme.of(
-                                                                    context)
-                                                                .textTheme
-                                                                .bodyText1
-                                                                .copyWith(
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontFamily:
-                                                                      'Proxima Nova',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    )
-                                                    // SizedBox()
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
-                                            ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(0, 20, 0, 0),
+                                                child: Container(
+                                                  width: 152,
+                                                  height: 103.92,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                        width: 152,
+                                                        height: 100,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(12),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      0, 0, 14),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .end,
+                                                            children: [
+                                                              Container(
+                                                                width: 95,
+                                                                height: 32,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              6),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0,
+                                                                          6,
+                                                                          0,
+                                                                          0),
+                                                                  child: Text(
+                                                                    'Save 13%',
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyText1
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Proxima Nova',
+                                                                          color:
+                                                                              Colors.white,
+                                                                          fontSize:
+                                                                              11,
+                                                                          useGoogleFonts:
+                                                                              false,
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '1 Week',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Proxima Nova',
+                                                                      color: Color(
+                                                                          0xFFFFCB37),
+                                                                      fontSize:
+                                                                          20,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            6,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  '\$ 13.99 / Week',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Proxima Nova',
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(0, 16, 0, 0),
+                                                child: Container(
+                                                  width: 152,
+                                                  height: 103.92,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                        width: 152,
+                                                        height: 100,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(12),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      0, 0, 14),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .end,
+                                                            children: [
+                                                              Container(
+                                                                width: 95,
+                                                                height: 32,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              6),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0,
+                                                                          6,
+                                                                          0,
+                                                                          0),
+                                                                  child: Text(
+                                                                    'Save 13%',
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyText1
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Proxima Nova',
+                                                                          color:
+                                                                              Colors.white,
+                                                                          fontSize:
+                                                                              11,
+                                                                          useGoogleFonts:
+                                                                              false,
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '1 Week',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Proxima Nova',
+                                                                      color: Color(
+                                                                          0xFFFFCB37),
+                                                                      fontSize:
+                                                                          20,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            6,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  '\$ 13.99 / Week',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Proxima Nova',
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(0, 16, 0, 0),
+                                                child: Container(
+                                                  width: 152,
+                                                  height: 103.92,
+                                                  decoration: BoxDecoration(),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                        width: 152,
+                                                        height: 100,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(12),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      0, 0, 14),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .end,
+                                                            children: [
+                                                              Container(
+                                                                width: 95,
+                                                                height: 32,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Colors
+                                                                      .black,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              6),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0,
+                                                                          6,
+                                                                          0,
+                                                                          0),
+                                                                  child: Text(
+                                                                    'Save 13%',
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyText1
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Proxima Nova',
+                                                                          color:
+                                                                              Colors.white,
+                                                                          fontSize:
+                                                                              11,
+                                                                          useGoogleFonts:
+                                                                              false,
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '1 Week',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Proxima Nova',
+                                                                      color: Color(
+                                                                          0xFFFFCB37),
+                                                                      fontSize:
+                                                                          20,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            6,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  '\$ 13.99 / Week',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Proxima Nova',
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
                                     ),
                                   ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [],
-                                  ),
                                 ],
                               ),
                             ),
+                            Container(),
                           ],
                         ),
                       ),
@@ -2482,164 +2243,6 @@ class _ShopWidgetState extends State<ShopWidget> {
           ),
         ),
       ),
-    );
-  }
-}
-
-const List<GoldChoice> goldChoices = const <GoldChoice>[
-  const GoldChoice(
-      discount: 'Save 13%', period: '1 Week', price: '\$ 13.99 / Week'),
-  const GoldChoice(
-      discount: 'Save 20%', period: '1 Month', price: '\$ 29.99 / Month'),
-  const GoldChoice(
-      discount: 'Save 30%', period: '3 Months', price: '\$ 49.99 / 3 Months'),
-  const GoldChoice(
-      discount: 'Save 70%', period: 'Lifetime', price: '\$ 149.99 lifetime'),
-];
-
-const List<PremiumChoice> premiumChoices = const <PremiumChoice>[
-  const PremiumChoice(
-      discount: 'Save 13%', period: '1 Week', price: '\$ 7.99 / Week'),
-  const PremiumChoice(
-      discount: 'Save 20%', period: '1 Month', price: '\$ 15.99 / Month'),
-  const PremiumChoice(
-      discount: 'Save 30%', period: '3 Months', price: '\$ 29.99 / 3 Months'),
-  const PremiumChoice(
-      discount: 'Save 70%', period: '6 Months', price: '\$ 49.99 / 6 Months'),
-];
-
-class GoldCards extends StatelessWidget {
-  const GoldCards({Key key, this.goldChoice}) : super(key: key);
-  final GoldChoice goldChoice;
-
-  Widget build(BuildContext context) {
-    // final TextStyle textStyle = Theme.of(context).textTheme.bodyText1;
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          height: 100,
-          width: 150,
-          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(20)),
-          child: Column(
-            children: [
-              SizedBox(height: 5),
-              Text(
-                goldChoice.period,
-                style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      color: Color.fromARGB(255, 255, 203, 55),
-                      fontFamily: 'Proxima Nova',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              SizedBox(height: 5),
-              Text(
-                goldChoice.price,
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
-                    color: Colors.black,
-                    fontFamily: 'Proxima Nova',
-                    fontWeight: FontWeight.w900,
-                    fontSize: 14),
-              )
-            ],
-          ),
-        ),
-        Positioned(
-          left: 49,
-          bottom: 85,
-          child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.black,
-                boxShadow: [
-                  BoxShadow(
-                      color: Color.fromARGB(255, 255, 203, 55),
-                      blurRadius: 10,
-                      spreadRadius: 5),
-                ],
-                borderRadius: BorderRadius.circular(10)),
-            child: Text(
-              goldChoice.discount,
-              style: Theme.of(context).textTheme.bodyText1.copyWith(
-                  color: Colors.white,
-                  fontFamily: 'Proxima Nova',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class PremiumCards extends StatelessWidget {
-  const PremiumCards({Key key, this.premiumChoice}) : super(key: key);
-  final PremiumChoice premiumChoice;
-
-  Widget build(BuildContext context) {
-    // final TextStyle textStyle = Theme.of(context).textTheme.bodyText1;
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          height: 100,
-          width: 150,
-          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(20)),
-          child: Column(
-            children: [
-              SizedBox(height: 5),
-              Text(
-                premiumChoice.period,
-                style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      color: Color.fromARGB(255, 255, 203, 55),
-                      fontFamily: 'Proxima Nova',
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              SizedBox(height: 5),
-              Text(
-                premiumChoice.price,
-                style: Theme.of(context).textTheme.bodyText2.copyWith(
-                    color: Colors.black,
-                    fontFamily: 'Proxima Nova',
-                    fontWeight: FontWeight.w900,
-                    fontSize: 14),
-              )
-            ],
-          ),
-        ),
-        Positioned(
-          left: 50,
-          bottom: 85,
-          child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.black,
-                boxShadow: [
-                  BoxShadow(
-                      color: Color.fromARGB(255, 255, 203, 55),
-                      blurRadius: 10,
-                      spreadRadius: 5),
-                ],
-                borderRadius: BorderRadius.circular(10)),
-            child: Text(
-              premiumChoice.discount,
-              style: Theme.of(context).textTheme.bodyText1.copyWith(
-                  color: Colors.white,
-                  fontFamily: 'Proxima Nova',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14),
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

@@ -1,5 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NotificationSettingsWidget extends StatefulWidget {
   const NotificationSettingsWidget({Key key}) : super(key: key);
@@ -31,7 +33,7 @@ class _NotificationSettingsWidgetState
         leading: Align(
           alignment: AlignmentDirectional(0, 0),
           child: InkWell(
-            onTap: () {
+            onTap: () async {
               Navigator.pop(context);
             },
             child: Container(
@@ -66,8 +68,8 @@ class _NotificationSettingsWidgetState
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-            child: ListView(
-              // mainAxisSize: MainAxisSize.max,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
@@ -102,6 +104,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -139,6 +142,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -176,6 +180,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -213,6 +218,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -250,6 +256,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -287,6 +294,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
@@ -325,6 +333,7 @@ class _NotificationSettingsWidgetState
                   ),
                 ),
                 Divider(
+                  thickness: 1,
                   indent: 10,
                   endIndent: 10,
                   color: Color(0xFFDADEE3),

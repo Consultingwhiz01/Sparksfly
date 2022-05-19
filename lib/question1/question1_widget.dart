@@ -1,7 +1,9 @@
-import '../enter_your_email/enter_your_email_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../questio2_1/questio21_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Question1Widget extends StatefulWidget {
   const Question1Widget({Key key}) : super(key: key);
@@ -11,8 +13,8 @@ class Question1Widget extends StatefulWidget {
 }
 
 class _Question1WidgetState extends State<Question1Widget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {
@@ -33,12 +35,12 @@ class _Question1WidgetState extends State<Question1Widget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Group_3595-modified.png',
+                'assets/images/Group_3595@3x.png',
               ).image,
             ),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,13 +58,11 @@ class _Question1WidgetState extends State<Question1Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                   child: Container(
-                    padding: EdgeInsets.only(left: 7, top: 7),
-                    width: double.infinity,
-                    height: 48.13,
+                    width: MediaQuery.of(context).size.width * 0.9,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryColor,
+                      color: Color(0x00FFFFFF),
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: TextFormField(
@@ -70,13 +70,18 @@ class _Question1WidgetState extends State<Question1Widget> {
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelStyle: FlutterFlowTheme.of(context).bodyText1,
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Proxima Nova',
+                                  color: Color(0xFFCDCDCD),
+                                  useGoogleFonts: false,
+                                ),
                         hintText: 'First Name',
                         hintStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Proxima Nova',
                                   color: Color(0x381A1A1C),
-                                  fontSize: 16,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: false,
                                 ),
@@ -96,40 +101,52 @@ class _Question1WidgetState extends State<Question1Widget> {
                         ),
                         filled: true,
                         fillColor: FlutterFlowTheme.of(context).secondaryColor,
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1,
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Proxima Nova',
+                            color: Color(0xFFCDCDCD),
+                            useGoogleFonts: false,
+                          ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => EnterYourEmailWidget(),
-                        ),
-                      );
-                    },
-                    text: 'Next',
-                    options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 50,
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontSize: 15,
-                            useGoogleFonts: false,
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 39, 0, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Color(0x00EEEEEE),
+                    ),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Questio21Widget(),
                           ),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1,
+                        );
+                      },
+                      text: 'Next',
+                      options: FFButtonOptions(
+                        width: 323.25,
+                        height: 48.13,
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              fontSize: 15,
+                              useGoogleFonts: false,
+                            ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 24,
                       ),
-                      borderRadius: 24,
                     ),
                   ),
                 ),

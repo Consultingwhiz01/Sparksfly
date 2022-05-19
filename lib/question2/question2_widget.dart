@@ -1,9 +1,10 @@
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-
 import '../question3/question3_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Question2Widget extends StatefulWidget {
   const Question2Widget({Key key}) : super(key: key);
@@ -31,7 +32,7 @@ class _Question2WidgetState extends State<Question2Widget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Group_3595-modified.png',
+                'assets/images/Group_3595@3x.png',
               ).image,
             ),
           ),
@@ -41,21 +42,19 @@ class _Question2WidgetState extends State<Question2Widget> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: 45,
-                  height: 45,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      // height: 30,
-                      // width: 30,
-                      child: Image.asset('assets/images/Group_62@3x.png'),
+                InkWell(
+                  onTap: () async {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 26,
+                    height: 26,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(
+                      'assets/images/Group_62@3x.png',
                     ),
                   ),
                 ),
@@ -72,55 +71,22 @@ class _Question2WidgetState extends State<Question2Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                         child: Container(
-                          padding: EdgeInsets.all(5),
-                          alignment: Alignment.center,
-                          width: 100,
+                          width: 96.53,
                           height: 48.13,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color(0xFFEEEEEE),
                             borderRadius: BorderRadius.circular(21.56),
                           ),
                           child: FlutterFlowDropDown(
-                            options: [
-                              '1',
-                              '2',
-                              '3',
-                              '5',
-                              '6',
-                              '7',
-                              '8',
-                              '9',
-                              '10',
-                              '11',
-                              '12',
-                              '13',
-                              '14',
-                              '15',
-                              '16',
-                              '17',
-                              '18',
-                              '19',
-                              '20',
-                              '21',
-                              '22',
-                              '23',
-                              '24',
-                              '25',
-                              '26',
-                              '27',
-                              '28',
-                              '29',
-                              '30',
-                              '31'
-                            ].toList(),
+                            options: ['Option 1'].toList(),
                             onChanged: (val) =>
                                 setState(() => dropDownValue1 = val),
                             width: 180,
@@ -129,22 +95,22 @@ class _Question2WidgetState extends State<Question2Widget> {
                                 FlutterFlowTheme.of(context).bodyText1.override(
                                       fontFamily: 'Proxima Nova',
                                       color: Colors.black,
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       useGoogleFonts: false,
                                     ),
                             hintText: 'Day',
                             icon: Icon(
                               Icons.keyboard_arrow_down,
                               color: FlutterFlowTheme.of(context).primaryColor,
-                              size: 25,
+                              size: 15,
                             ),
                             fillColor: Colors.white,
                             elevation: 0,
                             borderColor: Colors.transparent,
                             borderWidth: 0,
-                            borderRadius: 21.56,
+                            borderRadius: 26,
                             margin:
-                                EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                                EdgeInsetsDirectional.fromSTEB(20, 4, 12, 4),
                             hidesUnderline: true,
                           ),
                         ),
@@ -152,28 +118,14 @@ class _Question2WidgetState extends State<Question2Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                         child: Container(
-                          padding: EdgeInsets.all(5),
-                          width: 110,
+                          width: 103.5,
                           height: 48.13,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color(0xFFEEEEEE),
                             borderRadius: BorderRadius.circular(21.56),
                           ),
                           child: FlutterFlowDropDown(
-                            options: [
-                              'January',
-                              'February',
-                              'March',
-                              'April',
-                              'May',
-                              'June',
-                              'July',
-                              'August',
-                              'September',
-                              'October',
-                              'November',
-                              'December'
-                            ].toList(),
+                            options: ['Option 1'].toList(),
                             onChanged: (val) =>
                                 setState(() => dropDownValue2 = val),
                             width: 180,
@@ -182,53 +134,35 @@ class _Question2WidgetState extends State<Question2Widget> {
                                 FlutterFlowTheme.of(context).bodyText1.override(
                                       fontFamily: 'Proxima Nova',
                                       color: Colors.black,
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       useGoogleFonts: false,
                                     ),
                             hintText: 'Month',
                             icon: Icon(
                               Icons.keyboard_arrow_down,
                               color: FlutterFlowTheme.of(context).primaryColor,
-                              size: 25,
+                              size: 15,
                             ),
                             fillColor: Colors.white,
                             elevation: 0,
                             borderColor: Colors.transparent,
                             borderWidth: 0,
-                            borderRadius: 21.56,
+                            borderRadius: 26,
                             margin:
-                                EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                                EdgeInsetsDirectional.fromSTEB(20, 4, 12, 4),
                             hidesUnderline: true,
                           ),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(5),
-                        width: 110,
+                        width: 103.5,
                         height: 48.13,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xFFEEEEEE),
                           borderRadius: BorderRadius.circular(21.56),
                         ),
                         child: FlutterFlowDropDown(
-                          options: [
-                            '1990',
-                            '1991',
-                            '1992',
-                            '1993',
-                            '1994',
-                            '1995',
-                            '1996',
-                            '1997',
-                            '1998',
-                            '1999',
-                            '2000',
-                            '2001',
-                            '2002',
-                            '2003',
-                            '2004',
-                            '2005'
-                          ].toList(),
+                          options: ['Option 1'].toList(),
                           onChanged: (val) =>
                               setState(() => dropDownValue3 = val),
                           width: 180,
@@ -237,21 +171,21 @@ class _Question2WidgetState extends State<Question2Widget> {
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Proxima Nova',
                                     color: Colors.black,
-                                    fontSize: 15,
+                                    fontSize: 13,
                                     useGoogleFonts: false,
                                   ),
                           hintText: 'Year',
                           icon: Icon(
                             Icons.keyboard_arrow_down,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 25,
+                            size: 15,
                           ),
                           fillColor: Colors.white,
                           elevation: 0,
                           borderColor: Colors.transparent,
                           borderWidth: 0,
-                          borderRadius: 21.56,
-                          margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                          borderRadius: 26,
+                          margin: EdgeInsetsDirectional.fromSTEB(20, 4, 12, 4),
                           hidesUnderline: true,
                         ),
                       ),
@@ -259,34 +193,41 @@ class _Question2WidgetState extends State<Question2Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Question3Widget(),
-                        ),
-                      );
-                    },
-                    text: 'Next',
-                    options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 50,
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontSize: 15,
-                            useGoogleFonts: false,
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Color(0x00EEEEEE),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Question3Widget(),
                           ),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1,
+                        );
+                      },
+                      text: 'Next',
+                      options: FFButtonOptions(
+                        width: 323.15,
+                        height: 48.13,
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              fontSize: 15,
+                              useGoogleFonts: false,
+                            ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 24,
                       ),
-                      borderRadius: 24,
                     ),
                   ),
                 ),

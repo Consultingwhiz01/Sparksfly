@@ -1,8 +1,8 @@
-import 'package:sparksfly/index.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SettingsWidget extends StatefulWidget {
   const SettingsWidget({Key key}) : super(key: key);
@@ -25,7 +25,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
@@ -33,17 +33,17 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                      ),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
+                    InkWell(
+                      onTap: () async {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        width: 26,
+                        height: 26,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
                         child: Image.asset(
                           'assets/images/Group_62@3x.png',
                         ),
@@ -69,27 +69,21 @@ class _SettingsWidgetState extends State<SettingsWidget> {
               Align(
                 alignment: AlignmentDirectional(0, 0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 21, 0, 0),
                   child: Container(
-                    width: 335,
+                    width: MediaQuery.of(context).size.width * 0.9,
                     height: 56,
                     decoration: BoxDecoration(),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
                       child: ListTile(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      NotificationSettingsWidget()));
-                        },
                         title: Text(
-                          'Notification Setting',
+                          'Notification Settings',
                           style: FlutterFlowTheme.of(context).title3.override(
                                 fontFamily: 'Proxima Nova',
                                 color: Color(0xFF272A2F),
                                 fontSize: 16,
+                                fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
                         ),
@@ -111,27 +105,21 @@ class _SettingsWidgetState extends State<SettingsWidget> {
               Align(
                 alignment: AlignmentDirectional(0, 0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 13, 0, 0),
                   child: Container(
-                    width: 335,
+                    width: MediaQuery.of(context).size.width * 0.9,
                     height: 56,
                     decoration: BoxDecoration(),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
                       child: ListTile(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      SecurityAndPrivacyWidget()));
-                        },
                         title: Text(
                           'Security and Privacy',
                           style: FlutterFlowTheme.of(context).title3.override(
                                 fontFamily: 'Proxima Nova',
                                 color: Color(0xFF272A2F),
                                 fontSize: 16,
+                                fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
                         ),
@@ -153,26 +141,21 @@ class _SettingsWidgetState extends State<SettingsWidget> {
               Align(
                 alignment: AlignmentDirectional(0, 0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 13, 0, 0),
                   child: Container(
-                    width: 335,
+                    width: MediaQuery.of(context).size.width * 0.9,
                     height: 56,
                     decoration: BoxDecoration(),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
                       child: ListTile(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ContactFAQWidget()));
-                        },
                         title: Text(
                           'Contact & FAQ',
                           style: FlutterFlowTheme.of(context).title3.override(
                                 fontFamily: 'Proxima Nova',
                                 color: Color(0xFF272A2F),
                                 fontSize: 16,
+                                fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
                         ),
@@ -191,16 +174,16 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   ),
                 ),
               ),
-              Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 26, 0, 0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                    color: Color(0x00EEEEEE),
+                  ),
                   child: FFButtonWidget(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SignInWidget()));
+                      print('Button pressed ...');
                     },
                     text: 'Logout',
                     options: FFButtonOptions(
@@ -225,32 +208,38 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   ),
                 ),
               ),
-              Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
-                    },
-                    text: 'Delete Account',
-                    options: FFButtonOptions(
-                      width: 326.62,
-                      height: 56,
-                      color: FlutterFlowTheme.of(context).secondaryColor,
-                      textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
-                                fontFamily: 'Proxima Nova',
-                                color: Color(0xFFFF7A7A),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                useGoogleFonts: false,
-                              ),
-                      borderSide: BorderSide(
-                        color: Color(0xFFFF7A7A),
-                        width: 1,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                    color: Color(0x00EEEEEE),
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional(0, 0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Delete Account',
+                      options: FFButtonOptions(
+                        width: 375,
+                        height: 56,
+                        color: FlutterFlowTheme.of(context).secondaryColor,
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Proxima Nova',
+                                  color: Color(0xFFFF7A7A),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
+                                ),
+                        borderSide: BorderSide(
+                          color: Color(0xFFFF7A7A),
+                          width: 1,
+                        ),
+                        borderRadius: 28,
                       ),
-                      borderRadius: 28,
                     ),
                   ),
                 ),

@@ -1,6 +1,8 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FilterWidget extends StatefulWidget {
   const FilterWidget({Key key}) : super(key: key);
@@ -13,15 +15,11 @@ class _FilterWidgetState extends State<FilterWidget> {
   double sliderValue1;
   double sliderValue2;
 
-  RangeValues _currentAgeRangeValues = const RangeValues(25, 30);
-  RangeValues _currentDistanceRangeValues = const RangeValues(20, 30);
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 25),
       width: 375,
-      height: 380,
+      height: 366.79,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryColor,
         borderRadius: BorderRadius.only(
@@ -163,30 +161,18 @@ class _FilterWidgetState extends State<FilterWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
             child: Container(
-                width: 322,
-                child: SliderTheme(
-                  data: SliderThemeData(
-                    trackHeight: 8,
-                    valueIndicatorColor: Color.fromARGB(255, 247, 181, 0),
-                  ),
-                  child: RangeSlider(
-                    activeColor: FlutterFlowTheme.of(context).tertiaryColor,
-                    inactiveColor: Color(0xFFEEEEEE),
-                    min: 18,
-                    max: 90,
-                    divisions: 72,
-                    values: _currentAgeRangeValues,
-                    labels: RangeLabels(
-                      _currentAgeRangeValues.start.round().toString(),
-                      _currentAgeRangeValues.end.round().toString(),
-                    ),
-                    onChanged: (RangeValues values) {
-                      setState(() {
-                        _currentAgeRangeValues = values;
-                      });
-                    },
-                  ),
-                )),
+              width: 322,
+              child: Slider(
+                activeColor: FlutterFlowTheme.of(context).tertiaryColor,
+                inactiveColor: Color(0xFFEEEEEE),
+                min: 0,
+                max: 10,
+                value: sliderValue1 ??= 0,
+                onChanged: (newValue) {
+                  setState(() => sliderValue1 = newValue);
+                },
+              ),
+            ),
           ),
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(20, 10, 40, 0),
@@ -220,29 +206,18 @@ class _FilterWidgetState extends State<FilterWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
             child: Container(
-                width: 322,
-                child: SliderTheme(
-                  data: SliderThemeData(
-                      trackHeight: 8,
-                      valueIndicatorColor: Color.fromARGB(255, 247, 181, 0)),
-                  child: RangeSlider(
-                    activeColor: FlutterFlowTheme.of(context).tertiaryColor,
-                    inactiveColor: Color(0xFFEEEEEE),
-                    min: 10,
-                    max: 50,
-                    divisions: 4,
-                    values: _currentDistanceRangeValues,
-                    labels: RangeLabels(
-                      _currentDistanceRangeValues.start.round().toString(),
-                      _currentDistanceRangeValues.end.round().toString(),
-                    ),
-                    onChanged: (RangeValues values) {
-                      setState(() {
-                        _currentDistanceRangeValues = values;
-                      });
-                    },
-                  ),
-                )),
+              width: 322,
+              child: Slider(
+                activeColor: FlutterFlowTheme.of(context).tertiaryColor,
+                inactiveColor: Color(0xFFEEEEEE),
+                min: 0,
+                max: 10,
+                value: sliderValue2 ??= 0,
+                onChanged: (newValue) {
+                  setState(() => sliderValue2 = newValue);
+                },
+              ),
+            ),
           ),
           Align(
             alignment: AlignmentDirectional(0, 0),

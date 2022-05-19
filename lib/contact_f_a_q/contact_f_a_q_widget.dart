@@ -1,6 +1,9 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ContactFAQWidget extends StatefulWidget {
   const ContactFAQWidget({Key key}) : super(key: key);
@@ -10,10 +13,10 @@ class ContactFAQWidget extends StatefulWidget {
 }
 
 class _ContactFAQWidgetState extends State<ContactFAQWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -31,19 +34,18 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: double.infinity,
-                height: 465,
+                width: 375,
+                height: 480.7,
                 decoration: BoxDecoration(
                   color: Color(0xFFEEEEEE),
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: Image.asset(
-                      'assets/images/Mask_Group_32@3x.png',
+                      'assets/images/Mask_Group_59.png',
                     ).image,
                   ),
                 ),
@@ -52,14 +54,14 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 60, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 60, 0, 13),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
                             alignment: AlignmentDirectional(0, 0),
                             child: InkWell(
-                              onTap: () {
+                              onTap: () async {
                                 Navigator.pop(context);
                               },
                               child: Container(
@@ -95,8 +97,12 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                         ],
                       ),
                     ),
+                    Divider(
+                      thickness: 1,
+                      color: Color(0xFF393939),
+                    ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 50, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 28, 0, 0),
                       child: Text(
                         'Get in touch',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
@@ -112,8 +118,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
-                          width: 323.25,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 48.13,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryColor,
@@ -164,8 +169,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
-                          width: 323.25,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 48.13,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryColor,
@@ -216,8 +220,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
-                          width: 323.25,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 48.13,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryColor,
@@ -263,34 +266,45 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: AlignmentDirectional(0, 0),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
-                          text: 'Submit',
-                          options: FFButtonOptions(
-                            width: 323.25,
-                            height: 50,
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: 'Proxima Nova',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  useGoogleFonts: false,
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        decoration: BoxDecoration(
+                          color: Color(0x00EEEEEE),
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0, 0),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                            child: FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'Submit',
+                              options: FFButtonOptions(
+                                width: 323.25,
+                                height: 50,
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: 'Proxima Nova',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
                                 ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1,
+                                borderRadius: 28,
+                              ),
                             ),
-                            borderRadius: 28,
                           ),
                         ),
                       ),
@@ -299,484 +313,284 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                 ),
               ),
               Container(
-                // color: Colors.blueGrey,
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                height: 400,
                 width: double.infinity,
-                child: Container(
-                  child: ListView(
-                    padding: EdgeInsets.zero,
-                    // physics: NeverScrollableScrollPhysics(),
-                    children: [
-                      Container(
-                        // padding: EdgeInsets.symmetric(horizontal: 10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.grey[300]))),
-                        child: ExpansionTile(
-                          title: Text(
-                            'What if I can not find a stop',
-                            style: FlutterFlowTheme.of(context).title1.override(
-                                  fontFamily: 'Proxima Nova',
-                                  color: FlutterFlowTheme.of(context)
-                                      .tertiaryColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                  useGoogleFonts: false,
-                                ),
-                          ),
-                          collapsedIconColor: Colors.grey,
-                          iconColor: Color.fromARGB(255, 255, 203, 55),
-                          children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  width: 375,
-                                  height: 188,
-                                  child: Text(
-                                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Proxima Nova',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          fontWeight: FontWeight.normal,
-                                          useGoogleFonts: false,
-                                          lineHeight: 1.5,
-                                        ),
-                                  ),
-                                ),
-                              ),
+                color: Colors.white,
+                child: ExpandableNotifier(
+                  initialExpanded: false,
+                  child: ExpandablePanel(
+                    header: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(13, 0, 0, 0),
+                      child: Text(
+                        'What if I can not find a stop',
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
-                          ],
-                        ),
                       ),
-                      Container(
-                        // padding: EdgeInsets.symmetric(horizontal: 10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.grey[300]))),
-                        child: ExpansionTile(
-                          title: Text(
-                            'Why choose SparksFly',
-                            style: FlutterFlowTheme.of(context).title1.override(
-                                  fontFamily: 'Proxima Nova',
-                                  color: FlutterFlowTheme.of(context)
-                                      .tertiaryColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                  useGoogleFonts: false,
-                                ),
+                    ),
+                    collapsed: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFEEEEEE),
+                      ),
+                    ),
+                    expanded: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 375,
+                          height: 188,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF9F9F9),
                           ),
-                          collapsedIconColor: Colors.grey,
-                          iconColor: Color.fromARGB(255, 255, 203, 55),
-                          children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  width: 375,
-                                  height: 188,
-                                  child: Text(
-                                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Proxima Nova',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          fontWeight: FontWeight.normal,
-                                          useGoogleFonts: false,
-                                          lineHeight: 1.5,
-                                        ),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(13, 0, 13, 0),
+                            child: Text(
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
+                                    lineHeight: 1.5,
                                   ),
-                                ),
-                              ),
                             ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        // padding: EdgeInsets.symmetric(horizontal: 10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.grey[300]))),
-                        child: ExpansionTile(
-                          title: Text(
-                            'Why SparksFLy',
-                            style: FlutterFlowTheme.of(context).title1.override(
-                                  fontFamily: 'Proxima Nova',
-                                  color: FlutterFlowTheme.of(context)
-                                      .tertiaryColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                  useGoogleFonts: false,
-                                ),
                           ),
-                          collapsedIconColor: Colors.grey,
-                          iconColor: Color.fromARGB(255, 255, 203, 55),
-                          children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  width: 375,
-                                  height: 188,
-                                  child: Text(
-                                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Proxima Nova',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          fontWeight: FontWeight.normal,
-                                          useGoogleFonts: false,
-                                          lineHeight: 1.5,
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
                         ),
-                      ),
-                      Container(
-                        // padding: EdgeInsets.symmetric(horizontal: 10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.grey[300]))),
-                        child: ExpansionTile(
-                          title: Text(
-                            'What if I can not find a stop',
-                            style: FlutterFlowTheme.of(context).title1.override(
-                                  fontFamily: 'Proxima Nova',
-                                  color: FlutterFlowTheme.of(context)
-                                      .tertiaryColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700,
-                                  useGoogleFonts: false,
-                                ),
-                          ),
-                          collapsedIconColor: Colors.grey,
-                          iconColor: Color.fromARGB(255, 255, 203, 55),
-                          children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  width: 375,
-                                  height: 188,
-                                  child: Text(
-                                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Proxima Nova',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          fontWeight: FontWeight.normal,
-                                          useGoogleFonts: false,
-                                          lineHeight: 1.5,
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
+                    theme: ExpandableThemeData(
+                      tapHeaderToExpand: true,
+                      tapBodyToExpand: true,
+                      tapBodyToCollapse: true,
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      hasIcon: true,
+                      expandIcon: Icons.keyboard_arrow_down,
+                      collapseIcon: Icons.keyboard_arrow_up,
+                      iconColor: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
                   ),
                 ),
               ),
-
-              // Container(
-              //   padding: EdgeInsets.only(left: 10, right: 10, top: 12),
-              //   alignment: Alignment.centerLeft,
-              //   height: 60,
-              //   width: 370,
-              //   // color: Colors.white,
-              //   decoration: BoxDecoration(
-              //       border:
-              //           Border(bottom: BorderSide(color: Colors.grey[400]))),
-              //   child: ExpandableNotifier(
-              //     initialExpanded: false,
-              //     child: ExpandablePanel(
-              //       header: Text(
-              //         'What if I can not find a stop',
-              //         style: FlutterFlowTheme.of(context).title1.override(
-              //               fontFamily: 'Proxima Nova',
-              //               color: FlutterFlowTheme.of(context).tertiaryColor,
-              //               fontSize: 16,
-              //               fontWeight: FontWeight.w700,
-              //               useGoogleFonts: false,
-              //             ),
-              //       ),
-              //       collapsed: Container(
-              //         decoration: BoxDecoration(
-              //           color: Color(0xFFEEEEEE),
-              //         ),
-              //       ),
-              //       expanded: SingleChildScrollView(
-              //         scrollDirection: Axis.vertical,
-              //         child: Column(
-              //           mainAxisSize: MainAxisSize.max,
-              //           children: [
-              //             Container(
-              //               width: 375,
-              //               height: 188,
-              //               decoration: BoxDecoration(
-              //                 color: Color(0xFFF9F9F9),
-              //               ),
-              //               child: Text(
-              //                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-              //                 style: FlutterFlowTheme.of(context)
-              //                     .bodyText1
-              //                     .override(
-              //                       fontFamily: 'Proxima Nova',
-              //                       color: FlutterFlowTheme.of(context)
-              //                           .primaryColor,
-              //                       fontWeight: FontWeight.normal,
-              //                       useGoogleFonts: false,
-              //                       lineHeight: 1.5,
-              //                     ),
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //       theme: ExpandableThemeData(
-              //         tapHeaderToExpand: true,
-              //         tapBodyToExpand: true,
-              //         tapBodyToCollapse: true,
-              //         headerAlignment: ExpandablePanelHeaderAlignment.center,
-              //         hasIcon: true,
-              //         expandIcon: Icons.keyboard_arrow_down,
-              //         collapseIcon: Icons.keyboard_arrow_up,
-              //         iconColor: FlutterFlowTheme.of(context).tertiaryColor,
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // // Divider(
-              // //   thickness: 1,
-              // //   indent: 10,
-              // //   endIndent: 10,
-              // // ),
-              // Container(
-              //   padding: EdgeInsets.only(left: 10, right: 10, top: 12),
-              //   alignment: Alignment.centerLeft,
-              //   height: 60,
-              //   width: 370,
-              //   decoration: BoxDecoration(
-              //       border:
-              //           Border(bottom: BorderSide(color: Colors.grey[400]))),
-              //   // color: Colors.white,
-              //   child: ExpandableNotifier(
-              //     initialExpanded: false,
-              //     child: ExpandablePanel(
-              //       header: Text(
-              //         'What if I can not find a stop',
-              //         style: FlutterFlowTheme.of(context).title1.override(
-              //               fontFamily: 'Proxima Nova',
-              //               color: FlutterFlowTheme.of(context).tertiaryColor,
-              //               fontSize: 16,
-              //               fontWeight: FontWeight.w700,
-              //               useGoogleFonts: false,
-              //             ),
-              //       ),
-              //       collapsed: Container(
-              //         decoration: BoxDecoration(
-              //           color: Color(0xFFEEEEEE),
-              //         ),
-              //       ),
-              //       expanded: Column(
-              //         mainAxisSize: MainAxisSize.max,
-              //         children: [
-              //           Container(
-              //             width: 375,
-              //             height: 188,
-              //             decoration: BoxDecoration(
-              //               color: Color(0xFFF9F9F9),
-              //             ),
-              //             child: Text(
-              //               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-              //               style: FlutterFlowTheme.of(context)
-              //                   .bodyText1
-              //                   .override(
-              //                     fontFamily: 'Proxima Nova',
-              //                     color:
-              //                         FlutterFlowTheme.of(context).primaryColor,
-              //                     fontWeight: FontWeight.normal,
-              //                     useGoogleFonts: false,
-              //                     lineHeight: 1.5,
-              //                   ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       theme: ExpandableThemeData(
-              //         tapHeaderToExpand: true,
-              //         tapBodyToExpand: true,
-              //         tapBodyToCollapse: true,
-              //         headerAlignment: ExpandablePanelHeaderAlignment.center,
-              //         hasIcon: true,
-              //         expandIcon: Icons.keyboard_arrow_down,
-              //         collapseIcon: Icons.keyboard_arrow_up,
-              //         iconColor: FlutterFlowTheme.of(context).tertiaryColor,
-              //       ),
-              //     ),
-              //   ),
-              // ),
-
-              // Container(
-              //   padding: EdgeInsets.only(left: 10, right: 10, top: 12),
-              //   alignment: Alignment.centerLeft,
-              //   height: 60,
-              //   width: 370,
-              //   decoration: BoxDecoration(
-              //       border:
-              //           Border(bottom: BorderSide(color: Colors.grey[400]))),
-              //   child: ExpandableNotifier(
-              //     initialExpanded: false,
-              //     child: ExpandablePanel(
-              //       header: Text(
-              //         'Why SparksFly',
-              //         style: FlutterFlowTheme.of(context).title1.override(
-              //               fontFamily: 'Proxima Nova',
-              //               color: FlutterFlowTheme.of(context).tertiaryColor,
-              //               fontSize: 16,
-              //               fontWeight: FontWeight.w700,
-              //               useGoogleFonts: false,
-              //             ),
-              //       ),
-              //       collapsed: Container(
-              //         decoration: BoxDecoration(
-              //           color: Color(0xFFEEEEEE),
-              //         ),
-              //       ),
-              //       expanded: Column(
-              //         mainAxisSize: MainAxisSize.max,
-              //         children: [
-              //           Container(
-              //             width: 375,
-              //             height: 188,
-              //             decoration: BoxDecoration(
-              //               color: Color(0xFFF9F9F9),
-              //             ),
-              //             child: Text(
-              //               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-              //               style: FlutterFlowTheme.of(context)
-              //                   .bodyText1
-              //                   .override(
-              //                     fontFamily: 'Proxima Nova',
-              //                     color:
-              //                         FlutterFlowTheme.of(context).primaryColor,
-              //                     fontWeight: FontWeight.normal,
-              //                     useGoogleFonts: false,
-              //                     lineHeight: 1.5,
-              //                   ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       theme: ExpandableThemeData(
-              //         tapHeaderToExpand: true,
-              //         tapBodyToExpand: true,
-              //         tapBodyToCollapse: true,
-              //         headerAlignment: ExpandablePanelHeaderAlignment.center,
-              //         hasIcon: true,
-              //         expandIcon: Icons.keyboard_arrow_down,
-              //         collapseIcon: Icons.keyboard_arrow_up,
-              //         iconColor: FlutterFlowTheme.of(context).tertiaryColor,
-              //       ),
-              //     ),
-              //   ),
-              // ),
-
-              // Container(
-              //   padding: EdgeInsets.only(left: 10, right: 10, top: 12),
-              //   alignment: Alignment.centerLeft,
-              //   height: 60,
-              //   width: 370,
-              //   decoration: BoxDecoration(
-              //       border:
-              //           Border(bottom: BorderSide(color: Colors.grey[400]))),
-              //   child: ExpandableNotifier(
-              //     initialExpanded: false,
-              //     child: ExpandablePanel(
-              //       header: Text(
-              //         'What if I can not find a stop',
-              //         style: FlutterFlowTheme.of(context).title1.override(
-              //               fontFamily: 'Proxima Nova',
-              //               color: FlutterFlowTheme.of(context).tertiaryColor,
-              //               fontSize: 16,
-              //               fontWeight: FontWeight.w700,
-              //               useGoogleFonts: false,
-              //             ),
-              //       ),
-              //       collapsed: Container(
-              //         decoration: BoxDecoration(
-              //           color: Color(0xFFEEEEEE),
-              //         ),
-              //       ),
-              //       expanded: Column(
-              //         mainAxisSize: MainAxisSize.max,
-              //         children: [
-              //           Container(
-              //             width: 375,
-              //             height: 188,
-              //             decoration: BoxDecoration(
-              //               color: Color(0xFFF9F9F9),
-              //             ),
-              //             child: Text(
-              //               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
-              //               style: FlutterFlowTheme.of(context)
-              //                   .bodyText1
-              //                   .override(
-              //                     fontFamily: 'Proxima Nova',
-              //                     color:
-              //                         FlutterFlowTheme.of(context).primaryColor,
-              //                     fontWeight: FontWeight.normal,
-              //                     useGoogleFonts: false,
-              //                     lineHeight: 1.5,
-              //                   ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       theme: ExpandableThemeData(
-              //         tapHeaderToExpand: true,
-              //         tapBodyToExpand: true,
-              //         tapBodyToCollapse: true,
-              //         headerAlignment: ExpandablePanelHeaderAlignment.center,
-              //         hasIcon: true,
-              //         expandIcon: Icons.keyboard_arrow_down,
-              //         collapseIcon: Icons.keyboard_arrow_up,
-              //         iconColor: FlutterFlowTheme.of(context).tertiaryColor,
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              Divider(
+                thickness: 0.5,
+                indent: 10,
+                endIndent: 10,
+              ),
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                child: ExpandableNotifier(
+                  initialExpanded: false,
+                  child: ExpandablePanel(
+                    header: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(13, 0, 0, 0),
+                      child: Text(
+                        'Why choose SparksFly',
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ),
+                    collapsed: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFEEEEEE),
+                      ),
+                    ),
+                    expanded: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 375,
+                          height: 188,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF9F9F9),
+                          ),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(13, 0, 13, 0),
+                            child: Text(
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
+                                    lineHeight: 1.5,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    theme: ExpandableThemeData(
+                      tapHeaderToExpand: true,
+                      tapBodyToExpand: true,
+                      tapBodyToCollapse: true,
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      hasIcon: true,
+                      expandIcon: Icons.keyboard_arrow_down,
+                      collapseIcon: Icons.keyboard_arrow_up,
+                      iconColor: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                  ),
+                ),
+              ),
+              Divider(
+                thickness: 0.5,
+                indent: 10,
+                endIndent: 10,
+              ),
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                child: ExpandableNotifier(
+                  initialExpanded: false,
+                  child: ExpandablePanel(
+                    header: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(13, 0, 0, 0),
+                      child: Text(
+                        'Why SparksFly',
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ),
+                    collapsed: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFEEEEEE),
+                      ),
+                    ),
+                    expanded: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 375,
+                          height: 188,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF9F9F9),
+                          ),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(13, 0, 13, 0),
+                            child: Text(
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
+                                    lineHeight: 1.5,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    theme: ExpandableThemeData(
+                      tapHeaderToExpand: true,
+                      tapBodyToExpand: true,
+                      tapBodyToCollapse: true,
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      hasIcon: true,
+                      expandIcon: Icons.keyboard_arrow_down,
+                      collapseIcon: Icons.keyboard_arrow_up,
+                      iconColor: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                  ),
+                ),
+              ),
+              Divider(
+                thickness: 0.5,
+                indent: 10,
+                endIndent: 10,
+              ),
+              Container(
+                width: double.infinity,
+                color: Colors.white,
+                child: ExpandableNotifier(
+                  initialExpanded: false,
+                  child: ExpandablePanel(
+                    header: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(13, 0, 0, 0),
+                      child: Text(
+                        'What if I can not find a stop',
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
+                      ),
+                    ),
+                    collapsed: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFEEEEEE),
+                      ),
+                    ),
+                    expanded: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 375,
+                          height: 188,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF9F9F9),
+                          ),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(13, 0, 13, 0),
+                            child: Text(
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been\nthe industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has\nsurvived not only five centuries, but also the leap into electronic typesetting, remaing essentially\nunchanged',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: false,
+                                    lineHeight: 1.5,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    theme: ExpandableThemeData(
+                      tapHeaderToExpand: true,
+                      tapBodyToExpand: true,
+                      tapBodyToCollapse: true,
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      hasIcon: true,
+                      expandIcon: Icons.keyboard_arrow_down,
+                      collapseIcon: Icons.keyboard_arrow_up,
+                      iconColor: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

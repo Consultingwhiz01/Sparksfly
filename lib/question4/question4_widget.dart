@@ -1,8 +1,8 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-
-import '../upload_photo_video/upload_photo_video_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Question4Widget extends StatefulWidget {
   const Question4Widget({Key key}) : super(key: key);
@@ -27,7 +27,7 @@ class _Question4WidgetState extends State<Question4Widget> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: Image.asset(
-                'assets/images/Group_3595-modified.png',
+                'assets/images/Group_3595@3x.png',
               ).image,
             ),
           ),
@@ -37,28 +37,26 @@ class _Question4WidgetState extends State<Question4Widget> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: 45,
-                  height: 45,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      // height: 30,
-                      // width: 30,
-                      child: Image.asset('assets/images/Group_62@3x.png'),
+                InkWell(
+                  onTap: () async {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 26,
+                    height: 26,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(
+                      'assets/images/Group_62@3x.png',
                     ),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                   child: Text(
-                    'Who are you interested in?',
+                    'Who are you \ninterested in?',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Proxima Nova',
                           color: FlutterFlowTheme.of(context).tertiaryColor,
@@ -68,10 +66,10 @@ class _Question4WidgetState extends State<Question4Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
                   child: Container(
-                    width: double.infinity,
-                    height: 48.13,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 43.13,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryColor,
                       borderRadius: BorderRadius.circular(24),
@@ -79,7 +77,7 @@ class _Question4WidgetState extends State<Question4Widget> {
                     child: Align(
                       alignment: AlignmentDirectional(-1, 0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                         child: Text(
                           'Woman',
                           style:
@@ -96,16 +94,16 @@ class _Question4WidgetState extends State<Question4Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 21, 0, 0),
                   child: Container(
-                    width: double.infinity,
-                    height: 48.13,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 43.13,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).tertiaryColor,
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -138,10 +136,10 @@ class _Question4WidgetState extends State<Question4Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 21, 0, 0),
                   child: Container(
-                    width: 550,
-                    height: 48.13,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 43.13,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryColor,
                       borderRadius: BorderRadius.circular(24),
@@ -149,9 +147,9 @@ class _Question4WidgetState extends State<Question4Widget> {
                     child: Align(
                       alignment: AlignmentDirectional(-1, 0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                         child: Text(
-                          'Everyone',
+                          'Non-binary',
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Proxima Nova',
@@ -166,34 +164,41 @@ class _Question4WidgetState extends State<Question4Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => UploadPhotoVideoWidget(),
-                        ),
-                      );
-                    },
-                    text: 'Next',
-                    options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 50,
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontSize: 15,
-                            useGoogleFonts: false,
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 58.5, 0, 0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Color(0x00EEEEEE),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Question4Widget(),
                           ),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1,
+                        );
+                      },
+                      text: 'Next',
+                      options: FFButtonOptions(
+                        width: 318.13,
+                        height: 48.13,
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .subtitle2
+                            .override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              fontSize: 15,
+                              useGoogleFonts: false,
+                            ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 24,
                       ),
-                      borderRadius: 24,
                     ),
                   ),
                 ),
