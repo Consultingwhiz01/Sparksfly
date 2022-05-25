@@ -1,4 +1,5 @@
 import 'package:sparksfly/index.dart';
+import 'package:sparksfly/no_conversation_copy/convo-home.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -97,7 +98,7 @@ class _AlertMessageWidgetState extends State<AlertMessageWidget> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NoConversationCopyWidget(),
+                        builder: (context) => ConvoHome(),
                       ),
                     );
                   },

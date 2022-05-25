@@ -14,7 +14,7 @@ class _PhotoTemplatesState extends State<PhotoTemplates> {
     return DefaultTabController(
       length: 10,
       child: Scaffold(
-        backgroundColor: Color.fromARGB(223, 252, 206, 79),
+        backgroundColor: Color.fromARGB(245, 252, 206, 79),
         body: TabBarView(children: [
           Stack(
             children: [

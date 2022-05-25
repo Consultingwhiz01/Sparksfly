@@ -1785,7 +1785,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                           child: GridView.count(
                                             crossAxisCount: 2,
                                             childAspectRatio: 3 / 2,
-                                            crossAxisSpacing: 40.0,
+                                            crossAxisSpacing: 0,
                                             mainAxisSpacing: 0.0,
                                             // shrinkWrap: true,
                                             children: List.generate(
@@ -2132,7 +2132,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                                             child: GridView.count(
                                               crossAxisCount: 2,
                                               childAspectRatio: 3 / 2,
-                                              crossAxisSpacing: 40.0,
+                                              crossAxisSpacing: 10.0,
                                               mainAxisSpacing: 0.0,
                                               // shrinkWrap: true,
                                               children: List.generate(
@@ -2548,7 +2548,7 @@ class GoldCards extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 49,
+          left: 57,
           bottom: 85,
           child: Container(
             padding: EdgeInsets.all(10),
@@ -2616,7 +2616,7 @@ class PremiumCards extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 50,
+          left: 53,
           bottom: 85,
           child: Container(
             padding: EdgeInsets.all(10),

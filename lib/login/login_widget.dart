@@ -1,5 +1,6 @@
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:sparksfly/index.dart';
+import 'package:sparksfly/no_conversation_copy/convo-home.dart';
 
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -392,8 +393,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    NoConversationCopyWidget()));
+                                builder: (context) => ConvoHome()));
                       },
                       text: 'Log In',
                       options: FFButtonOptions(

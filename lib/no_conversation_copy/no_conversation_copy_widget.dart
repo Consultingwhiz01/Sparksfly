@@ -1,3 +1,4 @@
+import 'package:sparksfly/elizia_william/eliza_widget_main.dart';
 import 'package:sparksfly/index.dart';
 
 import '../chatbox/chatbox.dart';
@@ -94,7 +95,7 @@ class _NoConversationCopyWidgetState extends State<NoConversationCopyWidget> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => EliziaWilliamWidget(),
+                      builder: (context) => ElizaWidgetMain(),
                     ),
                   );
                 },

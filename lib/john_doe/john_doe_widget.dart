@@ -918,10 +918,10 @@ class _JohnDoeWidgetState extends State<JohnDoeWidget> {
           BottomNavigationBarItem(
             icon: IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NoConversationWidget()));
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => NoConversationWidget()));
               },
               icon: ImageIcon(AssetImage('assets/images/bottomnav3.png')),
               color: Colors.grey,

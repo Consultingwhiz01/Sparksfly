@@ -1,6 +1,7 @@
 import 'package:sparksfly/components/congratulations_widget.dart';
 import 'package:sparksfly/components/filter_widget.dart';
 import 'package:sparksfly/components/report_widget.dart';
+import 'package:sparksfly/no_conversation_copy/convo-home.dart';
 
 import '../components/outof_diamonds_widget.dart';
 import '../components/outof_hearts_widget.dart';
@@ -68,7 +69,7 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => NoConversationCopyWidget()));
+                        builder: (context) => ConvoHome()));
               },
               icon: ImageIcon(AssetImage('assets/images/bottomnav3.png')),
               color: Colors.grey,

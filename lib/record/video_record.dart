@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sparksfly/personal_info/edit_info.dart';
+import 'package:sparksfly/tab_bar_views/photo_temp.dart';
+import 'package:sparksfly/tab_bar_views/video_temp.dart';
 import 'package:sparksfly/tab_bar_views/video_templates.dart';
 import '../music_library/music_library_widget.dart';
 import '../tab_bar_views/photo_templates.dart';
@@ -273,8 +275,11 @@ class _VideoRecordState extends State<VideoRecord> {
                           onTap: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => VideoTemplates()));
+                                PageRouteBuilder(
+                                    opaque: false,
+                                    pageBuilder: ((context, animation,
+                                            secondaryAnimation) =>
+                                        VideoTemp())));
                           },
                           child: Text(
                             'Video Templates',
@@ -292,11 +297,19 @@ class _VideoRecordState extends State<VideoRecord> {
                           children: [
                             InkWell(
                               onTap: () {
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+
+                                //         builder: (context) =>
+                                //             PhotoTemplates()));
                                 Navigator.push(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            PhotoTemplates()));
+                                    PageRouteBuilder(
+                                        opaque: false,
+                                        pageBuilder: ((context, animation,
+                                                secondaryAnimation) =>
+                                            PhotoTemp())));
                               },
                               child: Text(
                                 'Photo Templates',

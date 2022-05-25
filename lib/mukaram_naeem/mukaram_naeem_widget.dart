@@ -1,3 +1,5 @@
+import 'package:sparksfly/elizia_william/eliza_widget_main.dart';
+import 'package:sparksfly/no_conversation_copy/convo-home.dart';
 import 'package:sparksfly/select_media/select_video.dart';
 
 import '../elizia_william/elizia_william_widget.dart';
@@ -47,7 +49,7 @@ class _MukaramNaeemWidgetState extends State<MukaramNaeemWidget> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => EliziaWilliamWidget()));
+                        builder: (context) => ElizaWidgetMain()));
               },
               icon: ImageIcon(
                 AssetImage('assets/images/sparkles@3x.png'),
@@ -60,10 +62,8 @@ class _MukaramNaeemWidgetState extends State<MukaramNaeemWidget> {
           BottomNavigationBarItem(
             icon: IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NoConversationCopyWidget()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ConvoHome()));
               },
               icon: ImageIcon(
                 AssetImage('assets/images/bottomnav3.png'),
