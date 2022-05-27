@@ -1,7 +1,10 @@
+import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../question2/question2_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,8 +16,8 @@ class Questio21Widget extends StatefulWidget {
 }
 
 class _Questio21WidgetState extends State<Questio21Widget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -139,6 +142,10 @@ class _Questio21WidgetState extends State<Questio21Widget> {
                   ),
                   child: FFButtonWidget(
                     onPressed: () async {
+                      final usersUpdateData = createUsersRecordData(
+                        email: textController.text,
+                      );
+                      await currentUserReference.update(usersUpdateData);
                       await Navigator.push(
                         context,
                         MaterialPageRoute(

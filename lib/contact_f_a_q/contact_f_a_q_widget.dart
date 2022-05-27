@@ -13,10 +13,10 @@ class ContactFAQWidget extends StatefulWidget {
 }
 
 class _ContactFAQWidgetState extends State<ContactFAQWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {

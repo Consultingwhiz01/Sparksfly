@@ -11,8 +11,8 @@ class MusicLibraryWidget extends StatefulWidget {
 }
 
 class _MusicLibraryWidgetState extends State<MusicLibraryWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {

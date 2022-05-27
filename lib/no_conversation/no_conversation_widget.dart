@@ -11,8 +11,8 @@ class NoConversationWidget extends StatefulWidget {
 }
 
 class _NoConversationWidgetState extends State<NoConversationWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {

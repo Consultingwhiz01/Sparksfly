@@ -27,7 +27,7 @@ class _OutofStarsWidgetState extends State<OutofStarsWidget> {
         children: [
           Image.asset(
             'assets/images/Group_3602@3x.png',
-            width: 276.88,
+            width: MediaQuery.of(context).size.width,
             height: 252,
             fit: BoxFit.fill,
           ),

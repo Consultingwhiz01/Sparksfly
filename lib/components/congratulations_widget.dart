@@ -27,7 +27,7 @@ class _CongratulationsWidgetState extends State<CongratulationsWidget> {
             borderRadius: BorderRadius.circular(0),
             child: Image.asset(
               'assets/images/Group_3768@3x.png',
-              width: 276.88,
+              width: MediaQuery.of(context).size.width,
               height: 252,
               fit: BoxFit.cover,
             ),

@@ -1,3 +1,4 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -15,13 +16,13 @@ class PhoneNumberWidget extends StatefulWidget {
 
 class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
   String dropDownValue;
-  TextEditingController textController;
+  TextEditingController phoneController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController();
+    phoneController = TextEditingController();
   }
 
   @override
@@ -123,7 +124,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: TextFormField(
-                            controller: textController,
+                            controller: phoneController,
                             obscureText: false,
                             decoration: InputDecoration(
                               labelStyle: FlutterFlowTheme.of(context)
@@ -186,11 +187,33 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                     ),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => VerifyPhoneNumberWidget(),
-                          ),
+                        final phoneNumberVal = valueOrDefault<String>(
+                          phoneController.text,
+                          'No Phone Number Set !',
+                        );
+                        if (phoneNumberVal == null ||
+                            phoneNumberVal.isEmpty ||
+                            !phoneNumberVal.startsWith('+')) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                  'Phone Number is required and has to start with +.'),
+                            ),
+                          );
+                          return;
+                        }
+                        await beginPhoneAuth(
+                          context: context,
+                          phoneNumber: phoneNumberVal,
+                          onCodeSent: () async {
+                            await Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VerifyPhoneNumberWidget(),
+                              ),
+                              (r) => false,
+                            );
+                          },
                         );
                       },
                       text: 'Next',

@@ -1,7 +1,9 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../location_enable/location_enable_widget.dart';
+import '../phone_number/phone_number_widget.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,23 +17,13 @@ class VerifyPhoneNumberWidget extends StatefulWidget {
 }
 
 class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
+  TextEditingController codeController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  TextEditingController textController1;
-  TextEditingController textController2;
-  TextEditingController textController3;
-  TextEditingController textController4;
-  TextEditingController textController5;
-  TextEditingController textController6;
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    textController3 = TextEditingController();
-    textController4 = TextEditingController();
-    textController5 = TextEditingController();
-    textController6 = TextEditingController();
+    codeController = TextEditingController();
   }
 
   @override
@@ -111,15 +103,28 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                             useGoogleFonts: false,
                           ),
                     ),
-                    Text(
-                      'Change',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: false,
+                    InkWell(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.fade,
+                            duration: Duration(milliseconds: 300),
+                            reverseDuration: Duration(milliseconds: 300),
+                            child: PhoneNumberWidget(),
                           ),
+                        );
+                      },
+                      child: Text(
+                        'Change',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Proxima Nova',
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: false,
+                            ),
+                      ),
                     ),
                   ],
                 ),
@@ -130,16 +135,16 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: 48.1,
+                        width: 250,
                         height: 43.13,
                         decoration: BoxDecoration(
                           color: Color(0xFFEEEEEE),
                           borderRadius: BorderRadius.circular(22),
                         ),
                         child: TextFormField(
-                          controller: textController1,
+                          controller: codeController,
                           onChanged: (_) => EasyDebounce.debounce(
-                            'textController1',
+                            'codeController',
                             Duration(milliseconds: 2000),
                             () => setState(() {}),
                           ),
@@ -171,231 +176,6 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                           keyboardType: TextInputType.number,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          child: TextFormField(
-                            controller: textController2,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController2',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          child: TextFormField(
-                            controller: textController3,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController3',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          child: TextFormField(
-                            controller: textController4,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController4',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          child: TextFormField(
-                            controller: textController5,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController5',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8.1, 0, 0, 0),
-                        child: Container(
-                          width: 48.1,
-                          height: 43.13,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          child: TextFormField(
-                            controller: textController6,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              'textController6',
-                              Duration(milliseconds: 2000),
-                              () => setState(() {}),
-                            ),
-                            autofocus: true,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
@@ -409,6 +189,23 @@ class _VerifyPhoneNumberWidgetState extends State<VerifyPhoneNumberWidget> {
                     ),
                     child: FFButtonWidget(
                       onPressed: () async {
+                        final smsCodeVal = codeController.text;
+                        if (smsCodeVal == null || smsCodeVal.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Enter SMS verification code.'),
+                            ),
+                          );
+                          return;
+                        }
+                        final phoneVerifiedUser = await verifySmsCode(
+                          context: context,
+                          smsCode: smsCodeVal,
+                        );
+                        if (phoneVerifiedUser == null) {
+                          return;
+                        }
+
                         await Navigator.push(
                           context,
                           MaterialPageRoute(

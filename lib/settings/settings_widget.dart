@@ -1,6 +1,9 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../no_conversation/no_conversation_widget.dart';
+import '../sign_in/sign_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -182,8 +185,15 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     color: Color(0x00EEEEEE),
                   ),
                   child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      await signOut();
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignInWidget(),
+                        ),
+                        (r) => false,
+                      );
                     },
                     text: 'Logout',
                     options: FFButtonOptions(
@@ -218,8 +228,15 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   child: Align(
                     alignment: AlignmentDirectional(0, 0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await deleteUser(context);
+                        await Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NoConversationWidget(),
+                          ),
+                          (r) => false,
+                        );
                       },
                       text: 'Delete Account',
                       options: FFButtonOptions(

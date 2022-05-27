@@ -73,7 +73,7 @@ class _NotificationSettingsWidgetState
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue1 ??= true,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue1 = newValue),
@@ -111,7 +111,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue2 ??= true,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue2 = newValue),
@@ -149,7 +149,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue3 ??= false,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue3 = newValue),
@@ -187,7 +187,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue4 ??= false,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue4 = newValue),
@@ -225,7 +225,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue5 ??= true,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue5 = newValue),
@@ -263,7 +263,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue6 ??= true,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue6 = newValue),
@@ -301,7 +301,7 @@ class _NotificationSettingsWidgetState
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                  child: SwitchListTile(
+                  child: SwitchListTile.adaptive(
                     value: switchListTileValue7 ??= true,
                     onChanged: (newValue) =>
                         setState(() => switchListTileValue7 = newValue),
@@ -338,7 +338,7 @@ class _NotificationSettingsWidgetState
                   endIndent: 10,
                   color: Color(0xFFDADEE3),
                 ),
-                SwitchListTile(
+                SwitchListTile.adaptive(
                   value: switchListTileValue8 ??= true,
                   onChanged: (newValue) =>
                       setState(() => switchListTileValue8 = newValue),

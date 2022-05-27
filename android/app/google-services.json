@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "420238324522",
+    "project_id": "sparksfly-57b2a",
+    "storage_bucket": "sparksfly-57b2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420238324522:android:a24b67e1473bdcf3926453",
+        "android_client_info": {
+          "package_name": "com.sparksfly.sparksfly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420238324522-07gvuh8m9f550t64oq0ot2pgvr2dg310.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sparksfly.sparksfly",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "420238324522-5ccbrbm7ekcmhvip3osp08vpu10u1guf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi3CMtKXz4FclTaP8uM0M3eVTen9JQH2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420238324522-5ccbrbm7ekcmhvip3osp08vpu10u1guf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "420238324522-3bo6tee71lk8s5bkd620far7uss8s5n0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sparksfly.sparksify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420238324522:android:5a715261e5c1219f926453",
+        "android_client_info": {
+          "package_name": "com.sparksfly.sparksify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420238324522-ij05ebrmacncjk6gnocm2cnl4ai9mbn4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sparksfly.sparksify",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "420238324522-5ccbrbm7ekcmhvip3osp08vpu10u1guf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi3CMtKXz4FclTaP8uM0M3eVTen9JQH2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420238324522-5ccbrbm7ekcmhvip3osp08vpu10u1guf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "420238324522-3bo6tee71lk8s5bkd620far7uss8s5n0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sparksfly.sparksify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
