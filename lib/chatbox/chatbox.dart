@@ -20,7 +20,8 @@ class _ChatBoxState extends State<ChatBox> {
     ChatMessage(
         messageContent: "Hello",
         messageType: "receiver",
-        imageString: 'assets/images/alina.png'),
+        imageString: 'assets/images/alina.png',
+    ),
     ChatMessage(
       messageContent: "Hey",
       messageType: "sender",
@@ -370,19 +371,38 @@ class _ChatBoxState extends State<ChatBox> {
                               SizedBox(
                                 width: 5,
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color.fromARGB(255, 255, 203, 55),
-                                  // (messages[index].messageType == "receiver"
-                                  //     ? Color.fromARGB(255, 255, 203, 55)
-                                  //     : Color.fromARGB(255, 219, 219, 219)),
-                                ),
-                                padding: EdgeInsets.all(16),
-                                child: Text(
-                                  messages[index].messageContent,
-                                  style: TextStyle(fontSize: 15),
-                                ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color.fromARGB(255, 255, 203, 55),
+                                      // (messages[index].messageType == "receiver"
+                                      //     ? Color.fromARGB(255, 255, 203, 55)
+                                      //     : Color.fromARGB(255, 219, 219, 219)),
+                                    ),
+                                    padding: EdgeInsets.all(16),
+                                    child: Text(
+                                      messages[index].messageContent,
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                  ),
+
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 4.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+
+                                        Align(
+                                          // alignment: Alignment.centerRight,
+                                          child: Text('11:00 am', style: TextStyle(fontFamily: 'Proxima Nova', fontSize: 10, color: Color(0xFF707070),),),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -397,24 +417,47 @@ class _ChatBoxState extends State<ChatBox> {
                                   decoration:
                                       BoxDecoration(shape: BoxShape.circle),
                                   child:
-                                      Image.asset(messages[index].imageString)),
+                                      Image.asset(messages[index].imageString),
+                              ),
                               SizedBox(
                                 width: 5,
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Color.fromARGB(255, 219, 219, 219),
-                                  // (messages[index].messageType == "receiver"
-                                  //     ? Color.fromARGB(255, 255, 203, 55)
-                                  //     : Color.fromARGB(255, 219, 219, 219)),
-                                ),
-                                padding: EdgeInsets.all(16),
-                                child: Text(
-                                  messages[index].messageContent,
-                                  style: TextStyle(fontSize: 15),
-                                ),
+                              Column(
+                                // mainAxisAlignment: MainAxisAlignment.,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color.fromARGB(255, 219, 219, 219),
+                                      // (messages[index].messageType == "receiver"
+                                      //     ? Color.fromARGB(255, 255, 203, 55)
+                                      //     : Color.fromARGB(255, 219, 219, 219)),
+                                    ),
+                                    padding: EdgeInsets.all(16),
+                                    child: Text(
+                                      messages[index].messageContent,
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                  ),
+                                  // SizedBox(height: 2,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 4.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+
+                                        Align(
+                                          // alignment: Alignment.centerRight,
+                                          child: Text('11:00 am', style: TextStyle(fontFamily: 'Proxima Nova', fontSize: 10, color: Color(0xFF707070),),),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                ],
                               ),
+                              
                             ],
                           ),
                         )),

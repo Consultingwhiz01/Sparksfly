@@ -112,7 +112,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(left: 7, top: 7),
                           width: 323.25,
                           height: 48.13,
                           decoration: BoxDecoration(
@@ -164,7 +164,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(left: 7, top: 7),
                           width: 323.25,
                           height: 48.13,
                           decoration: BoxDecoration(
@@ -216,7 +216,7 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                         child: Container(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: EdgeInsets.only(left: 7, top: 7),
                           width: 323.25,
                           height: 48.13,
                           decoration: BoxDecoration(
@@ -301,11 +301,10 @@ class _ContactFAQWidgetState extends State<ContactFAQWidget> {
               Container(
                 // color: Colors.blueGrey,
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                height: 400,
+                // height: 400,
                 width: double.infinity,
                 child: Container(
-                  child: ListView(
-                    padding: EdgeInsets.zero,
+                  child: Column(
                     // physics: NeverScrollableScrollPhysics(),
                     children: [
                       Container(

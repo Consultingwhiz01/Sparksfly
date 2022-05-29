@@ -1,3 +1,5 @@
+import 'package:sparksfly/elizia_william/elizia_william_widget.dart';
+
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
@@ -150,129 +152,137 @@ class _UpgradeToPremuim2State extends State<UpgradeToPremuim2> {
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(12, 0, 25, 12),
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 10),
-                height: 415,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  // color: Colors.blueGrey,
-                ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EliziaWilliamWidget()));
+                },
                 child: Container(
-                  height: 300,
-                  width: 350,
-                  // margin: EdgeInsets.only(bottom: 10),
-                  child: GridView(
-                    shrinkWrap: true,
-                    padding: EdgeInsets.zero,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 0,
-                      mainAxisSpacing: 15,
-                      childAspectRatio: (itemWidth / itemHeight),
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  height: 415,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    // color: Colors.blueGrey,
+                  ),
+                  child: Container(
+                    height: 300,
+                    width: 350,
+                    // margin: EdgeInsets.only(bottom: 10),
+                    child: GridView(
+                      shrinkWrap: true,
+                      padding: EdgeInsets.zero,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 0,
+                        mainAxisSpacing: 15,
+                        childAspectRatio: (itemWidth / itemHeight),
+                      ),
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          margin: EdgeInsets.only(left: 15, top: 5, bottom: 0),
+                          // padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/select-photos1.png',
+                                // width: 100,
+                                // height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'John Doe',
+                                style: TextStyle(
+                                    fontFamily: 'Proxima Nova',
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 15, top: 5, bottom: 0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/select-photos2.png',
+                                // width: 100,
+                                // height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'John Doe',
+                                style: TextStyle(
+                                    fontFamily: 'Proxima Nova',
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 15, top: 0, bottom: 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/select-photos3.png',
+                                // width: 100,
+                                // height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'John Doe',
+                                style: TextStyle(
+                                    fontFamily: 'Proxima Nova',
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 15, top: 0, bottom: 0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/select-photos7.png',
+                                // width: 100,
+                                // height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'John Doe',
+                                style: TextStyle(
+                                    fontFamily: 'Proxima Nova',
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    children: [
-                      Container(
-                        height: 80,
-                        width: 80,
-                        margin: EdgeInsets.only(left: 15, top: 5, bottom: 0),
-                        // padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/select-photos1.png',
-                              // width: 100,
-                              // height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'John Doe',
-                              style: TextStyle(
-                                  fontFamily: 'Proxima Nova',
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 15, top: 5, bottom: 0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/select-photos2.png',
-                              // width: 100,
-                              // height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'John Doe',
-                              style: TextStyle(
-                                  fontFamily: 'Proxima Nova',
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 15, top: 0, bottom: 0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/select-photos3.png',
-                              // width: 100,
-                              // height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'John Doe',
-                              style: TextStyle(
-                                  fontFamily: 'Proxima Nova',
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 15, top: 0, bottom: 0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/select-photos7.png',
-                              // width: 100,
-                              // height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              'John Doe',
-                              style: TextStyle(
-                                  fontFamily: 'Proxima Nova',
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),

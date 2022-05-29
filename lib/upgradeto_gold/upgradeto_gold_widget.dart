@@ -216,7 +216,7 @@ class _UpgradetoGoldWidgetState extends State<UpgradetoGoldWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
               child: FFButtonWidget(
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => UpgradeToGold2()));

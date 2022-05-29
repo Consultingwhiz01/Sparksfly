@@ -13,8 +13,8 @@ class _FilterWidgetState extends State<FilterWidget> {
   double sliderValue1;
   double sliderValue2;
 
-  RangeValues _currentAgeRangeValues = const RangeValues(25, 30);
-  RangeValues _currentDistanceRangeValues = const RangeValues(20, 30);
+  RangeValues _currentAgeRangeValues = const RangeValues(18, 25);
+  RangeValues _currentDistanceRangeValues = const RangeValues(10, 30);
 
   @override
   Widget build(BuildContext context) {

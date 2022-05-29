@@ -165,29 +165,35 @@ class _SignInWidgetState extends State<SignInWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'our ',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Proxima Nova',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryColor,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.normal,
-                                      useGoogleFonts: false,
-                                    ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 30),
+                            child: Text(
+                              'our ',
+                              style:
+                                  FlutterFlowTheme.of(context).bodyText1.override(
+                                        fontFamily: 'Proxima Nova',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.normal,
+                                        useGoogleFonts: false,
+                                      ),
+                            ),
                           ),
-                          Text(
-                            'Privacy Policy',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Proxima Nova',
-                                      color: FlutterFlowTheme.of(context)
-                                          .tertiaryColor,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w600,
-                                      useGoogleFonts: false,
-                                    ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 30),
+                            child: Text(
+                              'Privacy Policy',
+                              style:
+                                  FlutterFlowTheme.of(context).bodyText1.override(
+                                        fontFamily: 'Proxima Nova',
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
+                                      ),
+                            ),
                           ),
                         ],
                       ),

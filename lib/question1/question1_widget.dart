@@ -76,7 +76,7 @@ class _Question1WidgetState extends State<Question1Widget> {
                             FlutterFlowTheme.of(context).bodyText1.override(
                                   fontFamily: 'Proxima Nova',
                                   color: Color(0x381A1A1C),
-                                  fontSize: 16,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: false,
                                 ),

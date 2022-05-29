@@ -159,47 +159,48 @@ class _Question2WidgetState extends State<Question2Widget> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(21.56),
                           ),
-                          child: DropdownButtonHideUnderline(
-                            child: DropdownButton2(
-                              hint: Text(
-                                'Day',
-                                style: TextStyle(
-                                    fontFamily: 'Proxima Nova',
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              items: days
-                                  .map((day) => DropdownMenuItem(
-                                      value: day,
-                                      child: Text(
-                                        day,
-                                        style: TextStyle(
-                                            fontFamily: 'Proxima Nova',
-                                            color: Colors.black,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold),
-                                      )))
-                                  .toList(),
-                              value: selectedDayValue,
-                              onChanged: (value) {
-                                setState(() {
-                                  selectedDayValue = value as String;
-                                });
-                              },
-                              // margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
-                              buttonHeight: 40,
-                              buttonWidth: 140,
-                              itemHeight: 40,
-                              dropdownMaxHeight: 400,
-                              icon: Icon(
-                                Icons.keyboard_arrow_down,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 25,
+                          child: 
+                            DropdownButtonHideUnderline(
+                              child: DropdownButton2(
+                                hint: Text(
+                                  'Day',
+                                  style: TextStyle(
+                                      fontFamily: 'Proxima Nova',
+                                      color: Colors.black,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                items: days
+                                    .map((day) => DropdownMenuItem(
+                                        value: day,
+                                        child: Text(
+                                          day,
+                                          style: TextStyle(
+                                              fontFamily: 'Proxima Nova',
+                                              color: Colors.black,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold),
+                                        )))
+                                    .toList(),
+                                value: selectedDayValue,
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedDayValue = value as String;
+                                  });
+                                },
+                                // margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                                buttonHeight: 40,
+                                buttonWidth: 140,
+                                itemHeight: 40,
+                                dropdownMaxHeight: 400,
+                                icon: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
+                                  size: 25,
+                                ),
                               ),
                             ),
-                          ),
                         ),
                       ),
                       // Padding(
@@ -285,7 +286,8 @@ class _Question2WidgetState extends State<Question2Widget> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(21.56),
                           ),
-                          child: DropdownButtonHideUnderline(
+                          child: 
+                          DropdownButtonHideUnderline(
                             child: DropdownButton2(
                               hint: Text(
                                 'Month',

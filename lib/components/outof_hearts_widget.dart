@@ -27,7 +27,7 @@ class _OutofHeartsWidgetState extends State<OutofHeartsWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 10),
             child: Image.asset(
               'assets/images/Group_3600@3x.png',
-              width: 247.08,
+              width: MediaQuery.of(context).size.width,
               height: 141.25,
               fit: BoxFit.fill,
             ),

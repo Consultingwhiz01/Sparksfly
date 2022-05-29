@@ -33,6 +33,7 @@ class _EnterYourEmailWidgetState extends State<EnterYourEmailWidget> {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
             decoration: BoxDecoration(
+              // color: Colors.black,
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -67,7 +68,7 @@ class _EnterYourEmailWidgetState extends State<EnterYourEmailWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                     child: Text(
-                      'Enter your Email',
+                      'Enter your\nEmail',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Proxima Nova',
                             color: FlutterFlowTheme.of(context).tertiaryColor,
@@ -79,7 +80,8 @@ class _EnterYourEmailWidgetState extends State<EnterYourEmailWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                     child: Container(
-                      padding: EdgeInsets.only(left: 10),
+                      padding: EdgeInsets.only(left: 7, top: 7),
+
                       alignment: Alignment.center,
                       width: double.infinity,
                       height: 50,

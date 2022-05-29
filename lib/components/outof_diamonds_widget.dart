@@ -25,7 +25,7 @@ class _OutofDiamondsWidgetState extends State<OutofDiamondsWidget> {
         children: [
           Image.asset(
             'assets/images/Group_3603@3x.png',
-            width: 276.88,
+            width: MediaQuery.of(context).size.width,
             height: 252,
             fit: BoxFit.fill,
           ),

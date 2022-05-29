@@ -1,3 +1,4 @@
+import '../elizia_william/elizia_william_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,7 @@ class _TapsWidgetState extends State<TapsWidget> {
                     BottomNavigationBarItem(
                       icon: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.question_answer),
+                        icon: Image.asset('assets/images/bottomnav3.png'),
                         color: Colors.grey,
                         iconSize: 30,
                       ),
@@ -293,10 +294,15 @@ class _TapsWidgetState extends State<TapsWidget> {
                   ),
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.height,
-                decoration: BoxDecoration(color: Color.fromARGB(150, 0, 0, 0)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => EliziaWilliamWidget()));
+                },
+                child: Container(
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(color: Color.fromARGB(150, 0, 0, 0)),
+                ),
               ),
 
               Positioned(

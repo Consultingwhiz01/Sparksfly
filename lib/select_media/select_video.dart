@@ -54,26 +54,12 @@ class _SelectVideoState extends State<SelectVideo> {
                         return Container(
                           // decoration: BoxDecoration(color: Colors.amber),
                           child: Transform.scale(
-                              scale: i == _index ? 1 : 0.9,
-                              child: Container(
-                                // decoration: BoxDecoration(color: Colors.amber),
-                                child:
-                                    Image.asset('assets/images/rec-img1.png'),
-                              )
-
-                              // Card(
-                              //     elevation: 6,
-                              //     shape: RoundedRectangleBorder(
-                              //         borderRadius: BorderRadius.circular(20)),
-                              //     // Center(
-                              //     //   child: Text(
-                              //     //     "Card ${i + 1}",
-                              //     //     style: TextStyle(fontSize: 32),
-                              //     //   ),
-                              //     // ),
-                              //     ),
-                              // ),
-                              ),
+                            scale: i == _index ? 1 : 0.9,
+                            child: Container(
+                              // decoration: BoxDecoration(color: Colors.amber),
+                              child: Image.asset('assets/images/rec-img1.png'),
+                            ),
+                          ),
                         );
                       },
                     ),

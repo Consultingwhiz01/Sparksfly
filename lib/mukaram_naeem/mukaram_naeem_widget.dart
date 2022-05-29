@@ -6,6 +6,7 @@ import '../elizia_william/elizia_william_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 
+import '../flutter_flow/flutter_flow_widgets.dart';
 import '../no_conversation_copy/no_conversation_copy_widget.dart';
 import '../personal_info/edit_info.dart';
 import '../settings/settings_widget.dart';
@@ -49,7 +50,7 @@ class _MukaramNaeemWidgetState extends State<MukaramNaeemWidget> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ElizaWidgetMain()));
+                        builder: (context) => EliziaWilliamWidget()));
               },
               icon: ImageIcon(
                 AssetImage('assets/images/sparkles@3x.png'),
@@ -312,8 +313,11 @@ class _MukaramNaeemWidgetState extends State<MukaramNaeemWidget> {
                         ),
                       ),
                     ),
-                    Divider(
-                      thickness: 1,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Divider(
+                        thickness: 1,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 5),
@@ -459,498 +463,604 @@ class _MukaramNaeemWidgetState extends State<MukaramNaeemWidget> {
                     Divider(
                       thickness: 1,
                     ),
-                    Container(
-                      height: 700,
-                      width: 600,
-                      margin: EdgeInsets.only(
-                          top: 10, bottom: 20, left: 15, right: 0),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/bg2.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            top: 150,
-                            left: 30,
-                            child: Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 160),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        'Gold',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1
-                                            .copyWith(
-                                                color: Colors.black,
-                                                fontFamily: 'Proxima Nova',
-                                                fontWeight: FontWeight.bold),
-                                      ),
-                                      SizedBox(width: 10),
-                                      Text(
-                                        'Premium',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1
-                                            .copyWith(
-                                                color: Colors.black,
-                                                fontFamily: 'Proxima Nova',
-                                                fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(
-                                      top: 20, bottom: 20, left: 0, right: 30),
-                                  height: 450,
-                                  width: 305,
-                                  color: Colors.white,
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              '15 more Hearts for a total of 30 Hearts every 24 hours',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              '1 Diamond Heart a day',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              '1 star a week to get seen more',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              '1 24 hour extension on any timer match a day',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              'Can recover one expired match a day',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              'Unlimited heart wipes',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              'Unlimited timer extensions',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              'Unlimited expired match recovery',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              'See who hearted you and choose to heart them back',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            width: 190,
-                                            alignment: Alignment.centerLeft,
-                                            child: Text(
-                                              '5 Diamond hearts a day',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .copyWith(
-                                                    color: Colors.black,
-                                                    fontFamily: 'Proxima Nova',
-                                                    fontWeight: FontWeight.w800,
-                                                  ),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 13),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 255, 203, 55),
-                                            ),
-                                          ),
-                                          Container(
-                                            margin: EdgeInsets.only(left: 27),
-                                            child: Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  150, 255, 203, 55),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Divider(
-                                        thickness: 1,
-                                        color:
-                                            Color.fromARGB(255, 255, 203, 55),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                    // Generated code for this Container Widget...
+                    Stack(
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 60),
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 6,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18),
                             ),
-                          ),
-                          Positioned(
-                            top: 615,
-                            left: 105,
                             child: Container(
-                              width: 150,
+                              width: MediaQuery.of(context).size.width * 0.9,
+                              height: MediaQuery.of(context).size.height * 0.75,
                               decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(30)),
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                ShopWidget()));
-                                  },
-                                  child: Text(
-                                    'Upgrade',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1
-                                        .copyWith(
-                                            color: Colors.white,
-                                            fontFamily: 'Proxima Nova',
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18),
-                                  )),
+                                color: Color(0xFFEEEEEE),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: Image.asset(
+                                    'assets/images/Group_3831.png',
+                                  ).image,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 35,
+                                    color: Color(0x0F000000),
+                                    offset: Offset(6, 8),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 20, 0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: [
+                                          Text(
+                                            'Get SparksFly Plus',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 45, 15, 0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                                            child: Text(
+                                              'Gold',
+                                              style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                fontFamily: 'Proxima Nova',
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
+                                              ),
+                                            ),
+                                          ),
+                                          Text(
+                                            'Premium',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '15 more hearts for a total of 30 hearts \nevery 24 hours',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '1 diamond heart a day',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '1 star a week to get seen more.',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '1 24 extension on any timer \nmatch a day',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Can recover one expired match a day',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Unlimited heart swipes',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Unlimited timer extensions',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Unlimited expired match recovery',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'See who hearted you and choose to \nlike them back',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Star.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '5 Diamond hearts a day',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      height: 5,
+                                      thickness: 1,
+                                      color: Color(0x80FFCB37),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20, 8, 34, 8),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            '2 stars a week',
+                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                              fontFamily: 'Proxima Nova',
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 35, 0),
+                                                child: Image.asset(
+                                                  'assets/images/Star.png',
+                                                  width: 14,
+                                                  height: 14,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Image.asset(
+                                                'assets/images/Path_1.png',
+                                                width: 14,
+                                                height: 14,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
-                        ],
-                      ),
-                    )
+                        ),
+                        Positioned(
+                          bottom: 35,
+                          left: 85,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: Container(
+                              width: 170,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                // color: Color(0xFFEEEEEE),
+                              ),
+                              child: FFButtonWidget(
+                                onPressed: () {
+                                  // print('Button pressed ...');
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ShopWidget()));
+                                },
+                                text: 'Upgrade',
+                                options: FFButtonOptions(
+                                  width: 170,
+                                  height: 50,
+                                  color: FlutterFlowTheme.of(context).primaryColor,
+                                  textStyle:
+                                  FlutterFlowTheme.of(context).subtitle2.override(
+                                    fontFamily: 'Proxima Nova',
+                                    color: Colors.white,
+                                    useGoogleFonts: false,
+                                  ),
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1,
+                                  ),
+                                  borderRadius: 25,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               )),

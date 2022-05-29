@@ -1,8 +1,15 @@
+import 'package:country_pickers/country.dart';
+import 'package:country_pickers/country_picker_dropdown.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:sparksfly/index.dart';
+
+import '../components/dropdown_country_code.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import '';
 
-import 'login_widget.dart';
+import '../verify_phone_number/verify_phone_number_widget.dart';
 
 class EnterPhoneLogin extends StatefulWidget {
   const EnterPhoneLogin({Key key}) : super(key: key);
@@ -15,21 +22,14 @@ class _EnterPhoneLoginState extends State<EnterPhoneLogin> {
   TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  String _value;
+  String countryCode;
 
   @override
   void initState() {
     super.initState();
     textController = TextEditingController();
-    _value = countryCodes[0];
+    // _value = countryCodes[0];
   }
-
-  var countryCodes = <String>[
-    'US +1',
-    'IND +91',
-    "UK +44",
-    "CHN +86",
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -78,97 +78,127 @@ class _EnterPhoneLoginState extends State<EnterPhoneLogin> {
                     child: Text(
                       'Enter Phone Number',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            useGoogleFonts: false,
-                          ),
+                        fontFamily: 'Proxima Nova',
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        useGoogleFonts: false,
+                      ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 95,
-                        height: 40,
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.only(
-                          left: 10,
-                        ),
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).secondaryColor,
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        child: DropdownButton(
-                          value: _value,
-                          icon: const Icon(Icons.keyboard_arrow_down),
-                          style: Theme.of(context).textTheme.bodyText2.copyWith(
-                              color: Colors.black,
-                              fontFamily: 'Proxima Nova',
-                              fontWeight: FontWeight.bold),
-                          items: countryCodes.map((countryCode) {
-                            return DropdownMenuItem(
-                              value: countryCode,
-                              child: new Text(countryCode),
-                            );
-                          }).toList(),
-                          onChanged: (newValue) {
-                            setState(() {
-                              _value = newValue;
-                            });
-                          },
-                        ),
-                      ),
-                      Container(
-                        width: 230,
-                        height: 48.13,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).secondaryColor,
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        child: TextFormField(
-                          controller: textController,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelStyle: FlutterFlowTheme.of(context).bodyText1,
-                            hintText: 'Phone Number',
-                            hintStyle:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Proxima Nova',
-                                      color: Color(0x381A1A1C),
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w600,
-                                      useGoogleFonts: false,
-                                    ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            filled: true,
-                            fillColor:
-                                FlutterFlowTheme.of(context).secondaryColor,
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 95,
+                          height: 40,
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.only(
+                            left: 4,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            borderRadius: BorderRadius.circular(24),
+                          ),
+                          child: CountryPickerDropdown(
+                            priorityList: [
+                              Country(
+                                isoCode: "US",
+                                phoneCode: "1",
+                                name: "United States",
+                                iso3Code: "USA",
+                              ),
+                            ],
+                            isDense: false,
+                            isExpanded: true,
+                            initialValue: 'us',
+                            icon: Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: Icon(Icons.keyboard_arrow_down_rounded),
+                            ),
+                            itemBuilder: buildDropdownItem,
+                            onValuePicked: (Country country) {
+                              setState(() {
+                                countryCode = "+${country.phoneCode}";
+                              });
+                            },
+                          ),
+                          // DropdownButtonHideUnderline(
+                          //   child: DropdownButton(
+                          //     value: _value,
+                          //     icon: const Icon(Icons.keyboard_arrow_down),
+                          //     style: Theme.of(context)
+                          //         .textTheme
+                          //         .bodyText2
+                          //         .copyWith(
+                          //             color: Colors.black,
+                          //             fontFamily: 'Proxima Nova',
+                          //             fontWeight: FontWeight.bold),
+                          //     items: countryCodes.map((countryCode) {
+                          //       return DropdownMenuItem(
+                          //         value: countryCode,
+                          //         child: new Text(countryCode),
+                          //       );
+                          //     }).toList(),
+                          //     onChanged: (newValue) {
+                          //       setState(() {
+                          //         _value = newValue;
+                          //       });
+                          //     },
+                          //   ),
+                          // ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
+                        Container(
+                          width: 220,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondaryColor,
+                            borderRadius: BorderRadius.circular(24),
+                          ),
+                          child: TextFormField(
+                            controller: textController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelStyle:
+                              FlutterFlowTheme.of(context).bodyText1,
+                              hintText: 'Phone Number',
+                              contentPadding: EdgeInsets.all(10),
+                              hintStyle: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                fontFamily: 'Proxima Nova',
+                                color: Color(0x381A1A1C),
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              filled: true,
+                              fillColor:
+                              FlutterFlowTheme.of(context).secondaryColor,
+                            ),
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                        ),
+                      ],
+                    )),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 30, 0, 0),
                   child: FFButtonWidget(
                     onPressed: () {
                       Navigator.push(
@@ -181,17 +211,17 @@ class _EnterPhoneLoginState extends State<EnterPhoneLogin> {
                     },
                     text: 'Next',
                     options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 50,
+                      width: 323,
+                      height: 48,
                       color: FlutterFlowTheme.of(context).tertiaryColor,
                       textStyle: FlutterFlowTheme.of(context)
                           .subtitle2
                           .override(
-                            fontFamily: 'Proxima Nova',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontSize: 15,
-                            useGoogleFonts: false,
-                          ),
+                        fontFamily: 'Proxima Nova',
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        fontSize: 15,
+                        useGoogleFonts: false,
+                      ),
                       borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1,

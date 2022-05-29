@@ -95,7 +95,7 @@ class _NoConversationCopyWidgetState extends State<NoConversationCopyWidget> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ElizaWidgetMain(),
+                      builder: (context) => EliziaWilliamWidget(),
                     ),
                   );
                 },

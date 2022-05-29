@@ -80,33 +80,26 @@ class _FilterPageWidgetState extends State<FilterPageWidget> {
                   unselectedWidgetColor:
                       FlutterFlowTheme.of(context).tertiaryColor,
                 ),
-                child: CheckboxListTile(
-                  value: checkboxListTileValue1 ??= false,
-                  onChanged: (newValue) =>
-                      setState(() => checkboxListTileValue1 = newValue),
-                  title: Text(
-                    'Genres',
-                    style: FlutterFlowTheme.of(context).title3.override(
-                          fontFamily: 'Proxima Nova',
-                          color: Color(0xFF8E8E8E),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          useGoogleFonts: false,
-                        ),
+                child:
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                        'Genres',
+                        style: FlutterFlowTheme.of(context).title3.override(
+                              fontFamily: 'Proxima Nova',
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              useGoogleFonts: false,
+                            ),
+                      ),
                   ),
-                  tileColor: Colors.white,
-                  activeColor: FlutterFlowTheme.of(context).secondaryColor,
-                  checkColor: FlutterFlowTheme.of(context).tertiaryColor,
-                  dense: false,
-                  controlAffinity: ListTileControlAffinity.trailing,
                 ),
+
               ),
-              Divider(
-                thickness: 1,
-                indent: 20,
-                endIndent: 20,
-                color: Color(0xFF707070),
-              ),
+
               Theme(
                 data: ThemeData(
                   checkboxTheme: CheckboxThemeData(

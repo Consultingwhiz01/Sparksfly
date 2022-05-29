@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(
-        Duration(seconds: 1), () => setState(() => displaySplashImage = false));
+        Duration(seconds: 2), () => setState(() => displaySplashImage = false));
   }
 
   void setLocale(Locale value) => setState(() => _locale = value);
@@ -55,11 +55,13 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: displaySplashImage
           ? Container(
-              color: Colors.transparent,
+              // width: MediaQuery.of(context).size.width,
+              // height: MediaQuery.of(context).size.height,
+              color: Colors.white,
               child: Builder(
                 builder: (context) => Image.asset(
                   'assets/images/splash@3x.png',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
             )

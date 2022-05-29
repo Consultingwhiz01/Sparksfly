@@ -133,7 +133,7 @@ class _MyTypeState extends State<MyType> {
                           },
                           text: 'Bad Boy/Girl',
                           options: FFButtonOptions(
-                            width: 100,
+                            width: 99,
                             height: 32.87,
                             color: Color(0xFFE4E4E4),
                             textStyle:
@@ -1232,7 +1232,7 @@ class _MyTypeState extends State<MyType> {
                             },
                             text: 'Best Friend',
                             options: FFButtonOptions(
-                              width: double.infinity,
+                              width: 100,
                               height: 32.87,
                               color: Color(0xFFE4E4E4),
                               textStyle: FlutterFlowTheme.of(context)

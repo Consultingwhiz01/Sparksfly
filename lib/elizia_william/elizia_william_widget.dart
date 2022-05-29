@@ -66,10 +66,8 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
           BottomNavigationBarItem(
             icon: IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ConvoHome()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ConvoHome()));
               },
               icon: ImageIcon(AssetImage('assets/images/bottomnav3.png')),
               color: Colors.grey,
@@ -117,7 +115,7 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 1,
+                  height: MediaQuery.of(context).size.height * 0.88,
                   // height: 675,
                   decoration: BoxDecoration(
                     color: Color(0xFFEEEEEE),
@@ -493,7 +491,7 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
                                   //   color: Colors.grey,
                                   // ),
                                   PopupMenuDivider(
-                                    height: 2,
+                                    height: 0,
                                   ),
                                   PopupMenuItem(
                                     value: ReportWidget(),
@@ -514,6 +512,11 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
                                     ),
                                   ),
                                 ],
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(15),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -552,37 +555,85 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
                         ),
                         Container(
                           margin: EdgeInsets.only(left: 15, right: 9),
-                          child: Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(boxShadow: [
-                                  BoxShadow(
-                                    offset: Offset(0, 10),
-                                    color: Colors.red,
-                                    blurRadius: 30,
-                                    spreadRadius: 0.01,
-                                  )
-                                ]),
-                                child: InkWell(
-                                  child: Image.asset(
-                                    'assets/images/info-thumbsdown-modified.png',
-                                    width: 50,
-                                    height: 50,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 7, 0, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 1,
+                                  shape: const CircleBorder(),
+                                  child: InkWell(
+                                    onTap: () {
+
+                                    },
+                                    child: Container(
+                                      width: 46,
+                                      height: 46,
+                                      decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 17,
+                                            color: Color(0x36FF2E2E),
+                                            offset: Offset(0, 5),
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/images/Group_3824.png',
+                                        width: 46,
+                                        height: 46,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                // decoration: BoxDecoration(boxShadow: [
-                                //   BoxShadow(
-                                //     color: Colors.red,
-                                //     blurRadius: 30,
-                                //     spreadRadius: 0.05,
-                                //   )
-                                // ]),
-                                child: InkWell(
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 1,
+                                  shape: const CircleBorder(),
+                                  child: InkWell(
+                                    onTap: () {
+                                      return showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return Dialog(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(40),
+                                            ),
+                                            elevation: 16,
+                                            child: OutofStarsWidget(),
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: Container(
+                                      width: 46,
+                                      height: 46,
+                                      decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 17,
+                                            color: Color(0x80FFCC39),
+                                            offset: Offset(0, 5),
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/images/Group_3825.png',
+                                        width: 46,
+                                        height: 46,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
                                   onTap: () {
                                     return showDialog(
                                       context: context,
@@ -590,83 +641,98 @@ class _EliziaWilliamWidgetState extends State<EliziaWilliamWidget> {
                                         return Dialog(
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
-                                                BorderRadius.circular(40),
+                                            BorderRadius.circular(40),
                                           ),
                                           elevation: 16,
-                                          child: OutofStarsWidget(),
+                                          child: OutofDiamondsWidget(),
                                         );
                                       },
                                     );
                                   },
-                                  child: Image.asset(
-                                    'assets/images/info-star-modified.png',
-                                    width: 50,
-                                    height: 50,
+                                  child: Container(
+                                    width: 88,
+                                    height: 88,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Group_3799.png',
+                                      width: 46,
+                                      height: 46,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  return showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return Dialog(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 1,
+                                  shape: const CircleBorder(),
+                                  child: InkWell(
+                                    onTap: () {
+                                      return showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return Dialog(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
                                               BorderRadius.circular(40),
-                                        ),
-                                        elevation: 16,
-                                        child: OutofDiamondsWidget(),
+                                            ),
+                                            elevation: 16,
+                                            child: OutofHeartsWidget(),
+                                          );
+                                        },
                                       );
                                     },
-                                  );
-                                },
-                                child: Image.asset(
-                                  'assets/images/Group_3142@3x.png',
-                                  width: 80,
-                                  height: 80,
+                                    child: Container(
+                                      width: 46,
+                                      height: 46,
+                                      decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 17,
+                                            color: Color(0xFFFF7A7A),
+                                            offset: Offset(0, 5),
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/images/Group_3826.png',
+                                        width: 46,
+                                        height: 46,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  return showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return Dialog(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(40),
-                                        ),
-                                        elevation: 16,
-                                        child: OutofHeartsWidget(),
-                                      );
-                                    },
-                                  );
-                                },
-                                child: Image.asset(
-                                  'assets/images/info-heart-modified.png',
-                                  width: 50,
-                                  height: 50,
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 1,
+                                  shape: const CircleBorder(),
+                                  child: Container(
+                                    width: 46,
+                                    height: 46,
+                                    decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 17,
+                                          color: Color(0x99FFCB37),
+                                          offset: Offset(0, 5),
+                                        )
+                                      ],
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/Group_3827.png',
+                                      width: 46,
+                                      height: 46,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              InkWell(
-                                child: Image.asset(
-                                  'assets/images/info-thumbsup-modified.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                              ),
-                            ],
-                          ),
+                              ],
+                            ),
+                          )
                         ),
                         SizedBox(
                           height: 30,

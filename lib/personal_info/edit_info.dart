@@ -41,24 +41,24 @@ class _EditInfoState extends State<EditInfo> {
             child: Image.asset('assets/images/Group_62@3x.png'),
           ),
         ),
-        title: Center(
-          child: Container(
-            // alignment: Alignment.center,
-            // margin: EdgeInsets.only(left: 95),
-            child: Text(
-              'Edit Info',
-              style: Theme.of(context).textTheme.bodyText1.copyWith(
-                  color: Colors.black,
-                  fontFamily: 'Proxima Nova',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20),
-            ),
+        centerTitle: true,
+        title: Container(
+          // alignment: Alignment.center,
+          // margin: EdgeInsets.only(left: 95),
+          child: Text(
+            'Edit Info',
+            style: Theme.of(context).textTheme.bodyText1.copyWith(
+                color: Colors.black,
+                fontFamily: 'Proxima Nova',
+                fontWeight: FontWeight.bold,
+                fontSize: 20),
           ),
         ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+          color: Colors.white,
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
           child: Column(
             children: [

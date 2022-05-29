@@ -25,10 +25,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  assets_audio_player:
-    git:
-      url: https://github.com/asmengistu/Flutter-AssetsAudioPlayer
-      ref: d5f2a5b928ae118154aaf3ac2f1df96e301cb4af
+
   auto_size_text: 3.0.0
   cached_network_image: 3.1.0+1
   easy_debounce: 2.0.1
@@ -43,6 +40,8 @@ dependencies:
   url_launcher: 6.0.15
   segmented_circle_border: ^2.0.1
   dropdown_button2: ^1.4.0
+  country_pickers:
+  assets_audio_player:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

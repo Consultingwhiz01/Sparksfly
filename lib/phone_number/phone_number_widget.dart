@@ -1,6 +1,12 @@
+import 'package:country_pickers/country.dart';
+import 'package:country_pickers/country_picker_dropdown.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+
+import '../components/dropdown_country_code.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import '';
 
 import '../verify_phone_number/verify_phone_number_widget.dart';
 
@@ -15,21 +21,14 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
   TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  String _value;
+  String countryCode;
 
   @override
   void initState() {
     super.initState();
     textController = TextEditingController();
-    _value = countryCodes[0];
+    // _value = countryCodes[0];
   }
-
-  var countryCodes = <String>[
-    'US +1',
-    'IND +91',
-    "UK +44",
-    "CHN +86",
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -96,38 +95,63 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                           height: 40,
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.only(
-                            left: 10,
+                            left: 4,
                           ),
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryColor,
                             borderRadius: BorderRadius.circular(24),
                           ),
-                          child: DropdownButton(
-                            value: _value,
-                            icon: const Icon(Icons.keyboard_arrow_down),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                .copyWith(
-                                    color: Colors.black,
-                                    fontFamily: 'Proxima Nova',
-                                    fontWeight: FontWeight.bold),
-                            items: countryCodes.map((countryCode) {
-                              return DropdownMenuItem(
-                                value: countryCode,
-                                child: new Text(countryCode),
-                              );
-                            }).toList(),
-                            onChanged: (newValue) {
+                          child: CountryPickerDropdown(
+                            priorityList: [
+                              Country(
+                                isoCode: "US",
+                                phoneCode: "1",
+                                name: "United States",
+                                iso3Code: "USA",
+                              ),
+                            ],
+                            isDense: false,
+                            isExpanded: true,
+                            initialValue: 'us',
+                            icon: Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: Icon(Icons.keyboard_arrow_down_rounded),
+                            ),
+                            itemBuilder: buildDropdownItem,
+                            onValuePicked: (Country country) {
                               setState(() {
-                                _value = newValue;
+                                countryCode = "+${country.phoneCode}";
                               });
                             },
                           ),
+                          // DropdownButtonHideUnderline(
+                          //   child: DropdownButton(
+                          //     value: _value,
+                          //     icon: const Icon(Icons.keyboard_arrow_down),
+                          //     style: Theme.of(context)
+                          //         .textTheme
+                          //         .bodyText2
+                          //         .copyWith(
+                          //             color: Colors.black,
+                          //             fontFamily: 'Proxima Nova',
+                          //             fontWeight: FontWeight.bold),
+                          //     items: countryCodes.map((countryCode) {
+                          //       return DropdownMenuItem(
+                          //         value: countryCode,
+                          //         child: new Text(countryCode),
+                          //       );
+                          //     }).toList(),
+                          //     onChanged: (newValue) {
+                          //       setState(() {
+                          //         _value = newValue;
+                          //       });
+                          //     },
+                          //   ),
+                          // ),
                         ),
                         Container(
                           width: 220,
-                          height: 48.13,
+                          height: 40,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).secondaryColor,
                             borderRadius: BorderRadius.circular(24),
@@ -139,6 +163,7 @@ class _PhoneNumberWidgetState extends State<PhoneNumberWidget> {
                               labelStyle:
                                   FlutterFlowTheme.of(context).bodyText1,
                               hintText: 'Phone Number',
+                              contentPadding: EdgeInsets.all(10),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(

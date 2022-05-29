@@ -62,7 +62,7 @@ class _MusicLibraryWidgetState extends State<MusicLibraryWidget> {
                       width: 310,
                       height: 45,
                       decoration: BoxDecoration(
-                        color: Color(0xFFEEEEEE),
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(20.56),
                       ),
                       child: Padding(
